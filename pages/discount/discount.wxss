@@ -1,0 +1,171 @@
+/* pages/discount/discount.wxss */
+
+page {
+  background: white;
+}
+
+.section {
+  text-align: center;
+}
+
+.top-bar {
+  height: 50px;
+  border-top: solid 1px #e1e1e1;
+  border-bottom: solid 1px #e1e1e1;
+  line-height: 50px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  background: #fff;
+}
+
+.bar-active {
+  color: #bb9a6b !important;
+  border-bottom: solid 2px #bb9a6b;
+}
+
+.top-bar view {
+  line-height: 50px;
+  height: 100%;
+  font-size: 12px;
+  color: black;
+  width: 30%;
+  display: inline-block;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.top-bar text {
+  display: inline-block;
+  height: 100%;
+  padding: 0 5px;
+  box-sizing: border-box;
+}
+
+.qu-list, .qu-list2 {
+  width: 90%;
+  display: inline-block;
+  text-align: left;
+  margin-top: 15px;
+  height: 100px;
+  position: relative;
+  color: black;
+  font-size: 16px;
+}
+
+.qu-bg image {
+  width: 100%;
+  height: 100px;
+  background: rgba(0, 0, 0, 0);
+}
+
+.qu-text {
+  display: inline-block;
+  width: 60%;
+  position: absolute;
+  top: 13px;
+  left: 20px;
+}
+
+.qu-list {
+  color: #a0806b;
+}
+
+.qu-list2 {
+  color: #848484;
+}
+
+.qu-img {
+  width: 90px;
+  display: inline-block;
+  height: 100px;
+  background: #a0806b;
+  vertical-align: top;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.condition {
+  font-size: 10px;
+  margin-left: 20px;
+}
+
+.qu-list .qu-time {
+  font-size: 10px;
+  padding: 2px 3px;
+  background: #a0806b;
+  color: #fff;
+  border-radius: 4px 4px;
+  text-indent: 0.5em;
+  position: relative;
+}
+
+.qu-list2 .qu-time {
+  font-size: 10px;
+  padding: 2px 0;
+  background: #848484;
+  color: #fff;
+  border-radius: 4px 4px;
+  text-indent: 0.5em;
+  position: relative;
+}
+
+.qu-data {
+  position: absolute;
+  right: 10px;
+}
+
+.qu-img-no {
+  width: 90px;
+  display: inline-block;
+  height: 100px;
+  background: #a2a2a2;
+  vertical-align: top;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.change-qu {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.change-qu input {
+  width: 70%;
+  display: inline-block;
+  border: 2px solid #bb9a6b;
+  /* border-image: -webkit-linear-gradient( to right,#DDCAA0,#BB9A6B) 30 30;
+  border-image: -moz-linear-gradient( to right,#DDCAA0,#BB9A6B) 30 30;
+  border-image: linear-gradient( to right,#DDCAA0,#BB9A6B) 30 30; */
+  height: 35px;
+  border-radius: 3px 3px;
+  margin-top: 50px;
+}
+
+.change-qu button {
+  width: 60%;
+  height: 38px;
+  margin-top: 50px;
+  line-height: 35px;
+  background: linear-gradient(to right, #ddcaa0, #bb9a6b);
+  color: white;
+  font-size: 32rpx;
+}
+
+.qu-name {
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 3px;
+}
+
+.qu-price {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.placeholder {
+  color: #9b9b9b;
+}

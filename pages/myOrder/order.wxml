@@ -1,0 +1,144 @@
+<!--pages/myOrder/order.wxml-->
+<view class="section">
+  <view class='top-bar'>
+    <view>
+      <text class="{{navonOff[0]?'bar-active':''}}" data-index="0" bindtap='tabhandChange'>待收货</text>
+    </view>
+    <view>
+      <text class="{{navonOff[1]?'bar-active':''}}" data-index="1" bindtap='tabhandChange'>待归还</text>
+    </view>
+    <view>
+      <text class="{{navonOff[2]?'bar-active':''}}" bindtap='tabhandChange' data-index="2">已完成</text>
+    </view>
+    <view>
+      <text class="{{navonOff[3]?'bar-active':''}} all-order" bindtap='tabhandChange' data-index="3">全部订单</text>
+    </view>
+
+  </view>
+
+</view>
+<!--待收货-->
+<view class='come' wx:if="{{navonOff[0]}}" wx:for="{{Info1}}" wx:key="index" data-id="{{item.id}}">
+  <view class='pro-list'>
+    <view class='list-img list-item'>
+      <image src='{{item.img}}' mode='widthFix'></image>
+    </view>
+    <view class='list-detail list-item'>
+      <view class='list-name'>{{item.name}}</view>
+      <view class='list-base'>市场参考价:¥{{item.price}}</view>
+      <view class='list-select'>规格:{{item.standard}}</view>
+    </view>
+  </view>
+  <view class='bottom-detail'>
+    <view class='btn-box'>
+      <button class='list-order-btn' data-id="{{item.id}}" bindtap="HurryUp">
+        催发货
+      </button>
+      <button class='list-order-btn' data-id="{{item.id}}" bindtap="OrderDetail">
+        查看订单
+      </button>
+      <button class='list-order-btn ' data-id="{{item.id}}" bindtap="Send">
+        查看物流
+      </button>
+      <button class='list-order-btn ' data-id="{{item.id}}" bindtap="CloseOrder">
+        取消订单
+      </button>
+    </view>
+
+  </view>
+</view>
+<!--End待收货-->
+<!--待归还-->
+<view class='come' wx:if='{{navonOff[1]}}' wx:for="{{Info2}}" wx:key="index" data-id="{{item.id}}">
+  <view class='pro-list'>
+    <view class='list-img list-item'>
+      <image src='{{item.img}}'></image>
+    </view>
+    <view class='list-detail list-item'>
+      <view class='list-name'>{{item.name}}</view>
+      <view class='list-base'>市场参考价:¥{{item.price}}</view>
+      <view class='list-select'>规格:{{item.standard}}</view>
+    </view>
+  </view>
+  <view class='bottom-detail'>
+    <view class='btn-box'>
+      <button class='list-order-btn b-active' data-id="{{item.id}}" data-type="{{item.status}}" bindtap="OrderReturn">
+        预约归还
+      </button>
+      <button class='list-order-btn' data-id="{{item.id}}" bindtap="OrderDetail">
+        查看订单
+      </button>
+      <button class='list-order-btn' data-id="{{item.id}}" bindtap="Return">
+        查看物流
+      </button>
+    </view>
+
+  </view>
+</view>
+
+<!--End待归还-->
+<!--已完成-->
+<view class='come' wx:if="{{navonOff[2]}}" wx:for="{{Info3}}" wx:key="index" data-id="{{item.id}}">
+  <view class='pro-list'>
+    <view class='list-img list-item'>
+      <image src='{{item.img}}' mode='widthFix'></image>
+    </view>
+    <view class='list-detail list-item'>
+      <view class='list-name'>{{item.name}}</view>
+      <view class='list-base'>市场参考价:¥{{item.price}}</view>
+      <view class='list-select'>规格:{{item.standard}}</view>
+    </view>
+  </view>
+  <view class='bottom-detail'>
+    <view class='btn-box'>
+      <button class='list-order-btn b-active' data-id="{{item.id}}" bindtap="OrderDetail">
+        查看订单
+      </button>
+      <button class='list-order-btn ' data-id="{{item.id}}" data-standard="{{item.standardid}}" data-product="{{item.product}}" bindtap="BuyAgain">
+        再次下单
+      </button>
+    </view>
+
+  </view>
+</view>
+<!--End已完成-->
+
+<view class='come' wx:if="{{navonOff[3]}}" wx:for="{{Info4}}" wx:key="index" data-id="{{item.id}}">
+  <view class='pro-list'>
+    <view class='list-img list-item'>
+      <image src='{{item.img}}' mode='widthFix'></image>
+    </view>
+    <view class='list-detail list-item'>
+      <view class='list-name'>{{item.name}}</view>
+      <view class='list-base'>市场参考价:¥{{item.price}}</view>
+      <view class='list-select'>规格:{{item.standard}}</view>
+    </view>
+  </view>
+</view>
+
+<!--弹窗-->
+<view class="modal-mask" catchtouchmove="preventTouchMove" wx:if="{{visible}}"></view>
+<view class="modal-dialog" wx:if="{{visible}}">
+  <view class="modal-content">
+    <text>请确认</text>
+    <text>是否取消本订单</text>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">放弃</view>
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+  </view>
+</view>
+
+<!--弹窗-->
+<view class="modal-mask" catchtouchmove="preventTouchMove" wx:if="{{visible2}}"></view>
+<view class="modal-dialog" wx:if="{{visible2}}">
+  <view class="modal-content">
+    <text>让您久等了</text>
+    <text>加急消息已发送，请耐心等待</text>
+  </view>
+  <view class="modal-footer">
+    <view class="tip-confirm" bindtap="onCancel" data-status="confirm">朕知道了</view>
+  </view>
+</view>
+
+<i-toast id="toast" />

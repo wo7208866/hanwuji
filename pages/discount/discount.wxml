@@ -1,0 +1,49 @@
+<view class="section">
+  <view class='top-bar'>
+    <view>
+      <text class="{{dicountKind[0]?'bar-active':''}}" data-index="0" bindtap='tabhandChange'>可用优惠券</text>
+    </view>
+    <view>
+      <text class="{{dicountKind[1]?'bar-active':''}}" data-index="1" bindtap='tabhandChange'>过期优惠券</text>
+    </view>
+    <view>
+      <text class="{{dicountKind[2]?'bar-active':''}}" bindtap='tabhandChange' data-index="2">兑换优惠券</text>
+    </view>
+
+  </view>
+  <view class='qu-list' wx:if='{{dicountKind[0]}}' wx:for="{{Coupon1}}">
+    <view class='qu-bg'>
+      <image src='../../Image/discount-yes.png'></image>
+    </view>
+    <view class='qu-text' bindtap="ToUse">
+      <view class='qu-name'>{{item.name}}</view>
+      <view>
+        <text class='qu-price'>￥{{item.price}} </text>
+        <text class='condition'>{{item.condition}}</text>
+      </view>
+      <view class='qu-time qu-ti'>使用时间
+        <text class='qu-data'>{{item.time}}</text>
+      </view>
+    </view>
+
+  </view>
+  <view class='qu-list2' wx:if='{{dicountKind[1]}}' wx:for="{{Coupon2}}">
+    <view class='qu-bg'>
+      <image src='../../Image/discount-no.png'></image>
+    </view>
+    <view class='qu-text'>
+      <view class='qu-name'>{{item.name}}</view>
+      <view>
+        <text class='qu-price'>￥{{item.price}} </text>
+        <text class='condition'>{{item.condition}}</text>
+      </view>
+      <view class='qu-time qu-ti'>使用时间
+        <text class='qu-data'>{{item.time}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='change-qu' wx:if='{{dicountKind[2]}}'>
+    <input class='change-qu-num' type='text' value='' placeholder-class='placeholder' placeholder='请输入优惠券名称'></input>
+    <button>兑换</button>
+  </view>
+</view>

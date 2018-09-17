@@ -1,0 +1,44 @@
+<!--pages/select-address/select-address.wxml-->
+<view wx:if='{{show1}}'>
+      <view class='content'>
+
+            <image class='no-img' src='../../Image/icon-2-02.svg'/>
+            <view class='adr-tip'>您还未添加任何地址</view>  
+      </view>
+      <navigator url='../add-adress/add-address'>
+        <view class='add-adress' bindtap='AddAddress'>
+          <text class='add-icon'>+</text>
+          <text>添加新地址</text>
+        </view>
+      </navigator>
+</view>
+
+<view wx:if='{{show2}}'>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <view class='top-b'>
+           <navigator url='../add-adress/add-address'>
+          <view class='add-new-address'>
+              <text class='add-icon'>+</text>
+              <text>添加新地址</text>
+          </view>
+           </navigator>
+        </view>
+        <view  wx:for="{{address}}" wx:key="index">
+            <view class='list-box' bindtap='SelectAddress' data-id="{{item.id}}">
+                <view class='address-list'>
+                    <view class='address-name'>{{item.name}} <text>{{item.phone}}</text></view>
+                    <view class='address-detail'>{{item.info}}</view>
+                </view>
+              
+            </view>
+            <view class='edit-box'>
+                        <label class='select-box'><radio value='00' size="16" color='#a08069' checked='{{item.default}}' data-id="{{item.id}}" bindtap="ChangeDefault" /></label>
+                        <text class='defult'>设为默认</text>
+                        <text class='edit-btn' bindtap='EditAddress' data-id="{{item.id}}">编辑</text>
+                        <text class='del-btn' bindtap='DelAddress' data-id="{{item.id}}" catchtap="DelAddress">删除</text>
+                  </view>
+              </view>
+      </radio-group>
+</view>
+
+

@@ -1,0 +1,136 @@
+<!--pages/scene/scene.wxml-->
+<!--选项卡-->
+<view class="tabTit box tc bg_f">
+   <view class='tab_bg'>
+    <view class="flex1{{!tab[index]?' active':''}}" wx:for="{{tabTxt}}" wx:key="" data-index="{{index}}" bindtap="filterTab">
+      <text class="tabs_text">{{item}}</text>
+      <text class="tab_border{{!tab[index]?' active-img':''}}"></text>
+      <text class='item_pic'></text>
+    </view>
+    <view class="flex1{{!tab[2]?' active':''}}" wx:key="" data-index="{{index}}" bindtap="toggleLeft">
+      <image class="tabs_img" src="../../Image/Icon1.png"/>
+    </view>  
+    </view> 
+</view>
+
+<!--筛选项-->
+<view class="tabLayer tc" hidden="{{tab[0]}}">
+    <text class="{{house_type==0?'active':''}}" data-id="0" data-index="0" data-txt="版型" bindtap="filter">不限</text>
+    <text class="{{house_type==item.id?'active':''}}" wx:for="{{filterList.style_list}}" wx:key="" data-id="{{item.id}}" data-index="0" data-txt="{{item.name}}" bindtap="filter">{{item.name}}</text>
+</view>
+<view class="tabLayer tc" hidden="{{tab[1]}}">
+    <text class="{{house_style==0?'active':''}}" data-id="0" data-index="1" data-txt="颜色" bindtap="filter">不限</text>
+    <text class="{{house_style==item.id?'active':''}}" wx:for="{{filterList.color_list}}" wx:key="" data-id="{{item.id}}" data-index="1" data-txt="{{item.name}}" bindtap="filter">{{item.name}}</text>
+</view>
+
+<!--商品列表 start-->
+<view class="welfare-container"> 
+ 
+  <scroll-view scroll-y="true">
+      <view class="welfares">
+         <block wx:for-items="{{goodsWelfareItems}}" wx:key="name">
+          
+          <view class="welfares-good" catchtap="ProductDetail" data-type="{{item.name}}" data-id="{{item.id}}" >
+            <view>
+              <image src="{{item.url}}" class="welfares-image" mode="widthFix"/> 
+            </view>
+            <view class="brand-name web-font">
+              {{item.name}}
+              <text>新品</text>
+            </view>
+            <view class="product-name web-font">
+              {{item.describe}}
+            </view>            
+            <view class="product-price-wrap">
+              <p class="product-price-new">￥{{item.price}}</p>  
+            </view>
+
+          </view>
+        </block> 
+      </view>
+  </scroll-view>
+
+</view> 
+<!--商品列表 end-->
+
+<view class="weui-loadmore" hidden="{{isHideLoadMore}}">
+    <view class="weui-loading"></view>
+    <view class="weui-loadmore__tips">努力加载中</view>
+  </view>
+
+<!-- 筛选条件弹出层 -->
+    <i-drawer mode="left" visible="{{showLeft}}" bind:close="toggleLeft">
+      <scroll-view scroll-y="true" class="container-scroll">
+        <view class="demo-container">
+            <view class="drawer-content">
+              <text class="title web-font">颜色</text>
+              <view class="condition">
+                <button class="web-font condition-button{{condition[0]}}" bindtap="Condition" data-index="0" data-text="黑色" type="button">黑色</button>
+                <button class="web-font condition-button{{condition[1]}}" bindtap="Condition" data-index="1" data-text="白色" style="margin-left:20px;" type="button">白色</button>
+                <button class="web-font condition-button{{condition[2]}}" bindtap="Condition" data-index="2" data-text="蓝色" style="margin-left:20px;" type="button">蓝色</button>
+                <button class="web-font condition-button{{condition[3]}}" bindtap="Condition" data-index="3" data-text="黄色" style="margin-left:10px;" type="button">黄色</button>
+                <button class="web-font condition-button{{condition[4]}}" bindtap="Condition" data-index="4" data-text="红色" style="margin-left:20px;margin-top:10px;" type="button">红色</button>
+                <button class="web-font condition-button{{condition[5]}}" bindtap="Condition" data-index="5" data-text="紫色" style="margin-left:20px;margin-top:10px;" type="button">紫色</button>
+                <button class="web-font condition-button{{condition[6]}}" bindtap="Condition" data-index="6" data-text="灰色" style="margin-left:10px;margin-top:10px;" type="button">灰色</button>                
+              </view>
+            </view>
+            <view class="drawer-content" style="margin-top:20px;">
+              <text class="title web-font">面料</text>
+              <view class="condition">
+                <button class="web-font condition-button{{condition[7]}}" bindtap="Condition2" data-index="7" data-text="100%羊毛" type="button">100%羊毛</button>
+                <button class="web-font condition-button{{condition[8]}}" bindtap="Condition2" data-index="8" data-text="80%羊毛" style="margin-left:20px;" type="button">80%羊毛</button>
+              </view> 
+            </view>
+            <view class="drawer-content" style="margin-top:20px;">
+              <text class="title">薄厚程度</text>
+              <view class="condition">
+                <button class="condition-button{{condition[9]}}" bindtap="Condition3" data-index="9" data-text="薄款" type="button">薄款</button>
+                <button class="condition-button{{condition[10]}}" bindtap="Condition3" data-index="10" data-text="常规" style="margin-left:20px;" type="button">常规</button>
+                <button class="condition-button{{condition[11]}}" bindtap="Condition3" data-index="11" data-text="厚款" style="margin-left:20px;" type="button">厚款</button>            
+              </view>
+            </view>
+             <view class="drawer-content" style="margin-top:20px;">
+              <text class="title">版型</text>
+              <view class="condition">
+                <button class="condition-button{{condition[12]}}" bindtap="Condition4" data-index="12" data-text="修身型" type="button">修身型</button>
+                <button class="condition-button{{condition[13]}}" bindtap="Condition4" data-index="13" data-text="标准型" style="margin-left:20px;" type="button">标准型</button>         
+              </view>
+            </view>  
+             <view class="drawer-content" style="margin-top:20px;">
+              <text class="title">领型</text>
+              <view class="condition">
+                <button class="condition-button{{condition[14]}}" bindtap="Condition5" data-index="14" data-text="戗驳头" type="button">戗驳头</button>
+                <button class="condition-button{{condition[15]}}" bindtap="Condition5" data-index="15" data-text="平驳头" style="margin-left:20px;" type="button">平驳头</button>
+                <button class="condition-button{{condition[16]}}" bindtap="Condition5" data-index="16" data-text="青果领" style="margin-left:20px;" type="button">青果领</button>
+                <button class="condition-button{{condition[17]}}" bindtap="Condition5" data-index="17" data-text="中国立领" style="margin-left:10px;margin-top:10px;" type="button">中国立领</button>              
+              </view>
+            </view>
+             <view class="drawer-content" style="margin-top:20px;">
+              <text class="title">衣门襟</text>
+              <view class="condition">
+                <button class="condition-button{{condition[18]}}" bindtap="Condition6" data-index="18" data-text="单排扣" type="button">单排扣</button>
+                <button class="condition-button{{condition[19]}}" bindtap="Condition6" data-index="19" data-text="双排扣" style="margin-left:20px;" type="button">双排扣</button>
+                <button class="condition-button{{condition[20]}}" bindtap="Condition6" data-index="20" data-text="两粒扣" style="margin-left:20px;" type="button">两粒扣</button>
+                <button class="condition-button{{condition[21]}}" bindtap="Condition6" data-index="21" data-text="五粒扣" style="margin-left:10px;margin-top:10px;" type="button">五粒扣</button>              
+              </view>
+            </view> 
+             <view class="drawer-content" style="margin-top:20px;">
+              <text class="title">适用季节</text>
+              <view class="condition">
+                <button class="condition-button{{condition[22]}}" bindtap="Condition8" data-index="22" data-text="四季" type="button">四季</button>
+                <button class="condition-button{{condition[23]}}" bindtap="Condition8" data-index="23" data-text="冬季" style="margin-left:20px;" type="button">冬季</button>
+                <button class="condition-button{{condition[24]}}" bindtap="Condition8" data-index="24" data-text="春秋季" style="margin-left:20px;" type="button">春秋季</button>
+                <button class="condition-button{{condition[25]}}" bindtap="Condition8" data-index="25" data-text="夏季" style="margin-left:10px;margin-top:10px;" type="button">夏季</button>                            
+              </view>
+            </view>
+            <view class="Space">
+            </view>
+            <view class="Control">
+            <button class="Clear" bindtap="Clear" type='button'>重置</button>
+            <button class="Done" bindtap="Done" type="button">确定</button>   
+            </view>                                                     
+            
+        </view>
+</scroll-view>
+    </i-drawer>
+<!-- End弹出层-->

@@ -1,0 +1,81 @@
+<scroll-view class="demo-container" scroll-y>
+  <view class="drawer-content">
+    <text class="title web-font">颜色</text>
+    <view class="condition">
+      <text class="web-font condition-button{{condition[0]}}" bindtap="Condition" data-index="0" data-text="黑色">黑色</text>
+      <text class="web-font condition-button{{condition[1]}}" bindtap="Condition" data-index="1" data-text="白色" style="margin-left:10px;">白色</text>
+      <text class="web-font condition-button{{condition[2]}}" bindtap="Condition" data-index="2" data-text="蓝色" style="margin-left:10px;">蓝色</text>
+      <text class="web-font condition-button{{condition[3]}}" bindtap="Condition" data-index="3" data-text="黄色" style='margin-top:10px;'>黄色</text>
+      <text class="web-font condition-button{{condition[4]}}" bindtap="Condition" data-index="4" data-text="红色" style="margin-left:10px;margin-top:10px;">红色</text>
+      <text class="web-font condition-button{{condition[5]}}" bindtap="Condition" data-index="5" data-text="紫色" style="margin-left:10px;margin-top:10px;">紫色</text>
+      <text class="web-font condition-button{{condition[6]}}" bindtap="Condition" data-index="6" data-text="灰色" style="margin-top:10px;">灰色</text>
+    </view>
+  </view>
+  <view class="drawer-content" style="margin-top:20px;">
+    <text class="title web-font">面料</text>
+    <view class="condition">
+      <text class="web-font condition-button{{condition[7]}}" bindtap="Condition2" data-index="7" data-text="100%羊毛">100%羊毛</text>
+      <text class="web-font condition-button{{condition[8]}}" bindtap="Condition2" data-index="8" data-text="80%羊毛" style="margin-left:10px;">80%羊毛</text>
+    </view>
+  </view>
+  <view class="drawer-content" style="margin-top:20px;">
+    <text class="title">薄厚程度</text>
+    <view class="condition">
+      <text class="condition-button{{condition[9]}}" bindtap="Condition3" data-index="9" data-text="薄款">薄款</text>
+      <text class="condition-button{{condition[10]}}" bindtap="Condition3" data-index="10" data-text="常规" style="margin-left:10px;">常规</text>
+      <text class="condition-button{{condition[11]}}" bindtap="Condition3" data-index="11" data-text="厚款" style="margin-left:10px;">厚款</text>
+    </view>
+  </view>
+  <view class="drawer-content" style="margin-top:20px;">
+    <text class="title">版型</text>
+    <view class="condition">
+      <text class="condition-button{{condition[12]}}" bindtap="Condition4" data-index="12" data-text="修身型">修身型</text>
+      <text class="condition-button{{condition[13]}}" bindtap="Condition4" data-index="13" data-text="标准型" style="margin-left:10px;">标准型</text>
+    </view>
+  </view>
+  <view class="drawer-content" style="margin-top:20px;">
+    <text class="title">领型</text>
+    <view class="condition">
+      <text class="condition-button{{condition[14]}}" bindtap="Condition5" data-index="14" data-text="戗驳头">戗驳头</text>
+      <text class="condition-button{{condition[15]}}" bindtap="Condition5" data-index="15" data-text="平驳头" style="margin-left:10px;">平驳头</text>
+      <text class="condition-button{{condition[16]}}" bindtap="Condition5" data-index="16" data-text="青果领" style="margin-left:10px;">青果领</text>
+      <text class="condition-button{{condition[17]}}" bindtap="Condition5" data-index="17" data-text="中国立领" style="margin-top:10px;">中国立领</text>
+    </view>
+  </view>
+  <view class="drawer-content" style="margin-top:20px;">
+    <text class="title">衣门襟</text>
+    <view class="condition">
+      <text class="condition-button{{condition[18]}}" bindtap="Condition6" data-index="18" data-text="单排扣">单排扣</text>
+      <text class="condition-button{{condition[19]}}" bindtap="Condition6" data-index="19" data-text="双排扣" style="margin-left:10px;">双排扣</text>
+      <text class="condition-button{{condition[20]}}" bindtap="Condition6" data-index="20" data-text="两粒扣" style="margin-left:10px;">两粒扣</text>
+      <text class="condition-button{{condition[21]}}" bindtap="Condition6" data-index="21" data-text="五粒扣" style="margin-top:10px;">五粒扣</text>
+    </view>
+  </view>
+  <view class="drawer-content" style="margin-top:20px;">
+    <text class="title">适用场景</text>
+    <view class="condition">
+      <text class="condition-button{{condition[22]}}" bindtap="Condition7" data-index="22" data-text="婚礼">婚礼宴会</text>
+      <text class="condition-button{{condition[23]}}" bindtap="Condition7" data-index="23" data-text="宴会" style="margin-left:10px;">商务职场</text>
+      <text class="condition-button{{condition[24]}}" bindtap="Condition7" data-index="24" data-text="面试" style="margin-left:10px;">日常休闲</text>
+    </view>
+  </view>
+  <view class="drawer-content" style="margin-top:20px;">
+    <text class="title">适用季节</text>
+    <view class="condition">
+      <text class="condition-button{{condition[25]}}" bindtap="Condition8" data-index="25" data-text="四季">四季</text>
+      <text class="condition-button{{condition[26]}}" bindtap="Condition8" data-index="26" data-text="冬季" style="margin-left:10px;">冬季</text>
+      <text class="condition-button{{condition[27]}}" bindtap="Condition8" data-index="27" data-text="春秋季" style="margin-left:10px;">春秋季</text>
+      <text class="condition-button{{condition[28]}}" bindtap="Condition8" data-index="28" data-text="夏季" style="margin-top:10px;">夏季</text>
+    </view>
+  </view>
+  <view class="Space">
+  </view>
+
+
+</scroll-view>
+<view class="Control">
+  <button class="Clear" bindtap="Clear" type='button'>重置</button>
+  <button class="Done" bindtap="Done" type="button">
+    确定
+  </button>
+</view>

@@ -1,0 +1,25 @@
+<view class='infor-list web-font'>
+
+  <view class='user-image'>
+    <text class='text1'>头像</text>
+    <image src='{{userAvatar}}'></image>
+  </view>
+  <view class='user-image2'>
+    <text class='text1'>昵称</text>
+    <view class='text2'>
+      <input type='text' value='{{userName}}'>180</input>
+    </view>
+  </view>
+  <view class='user-image2'>
+    <text class='text1'>性别</text>
+    <input class='text2' type='text' value='{{gender==1?"男":"女"}}'>180</input>
+  </view>
+  <view class='user-image2'>
+    <text class='text1'>年龄</text>
+    <input class='text2' type='text' value='11'>180</input>
+  </view>
+  <view class='user-image2'>
+    <text class='text1'>到期时间</text>
+    <input class='text2' type='text' value='11'>180</input>
+  </view>
+</view>

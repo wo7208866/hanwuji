@@ -1,0 +1,14 @@
+<!--pages/orderfinish/orderfinish.wxml-->
+<view class="content">
+  <image src="../../Image/right.png"></image>
+  <view class="space">
+  </view>
+  <text>恭喜您,下单成功</text>
+  <text>帅气的西装已经打包发往您的家里了</text>
+  <view class="Info">
+    <text>详细信息可前往</text>
+    <text class="Jump" bindtap='MyOrder'>我的订单</text>
+    <text>查询</text>
+  </view>
+  <text class="Back" bindtap='MyBack'>返回首页</text>
+</view>

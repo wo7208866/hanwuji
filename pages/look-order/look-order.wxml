@@ -1,0 +1,33 @@
+<!--pages/orderconfirm/orderconfirm.wxml-->
+<!--地址-->
+<view class="address">
+<view class="left">
+  <view class="row web-font">
+    <text>{{Address.name}}</text>
+    <text>{{Address.phone}}</text>
+  </view>
+  <view class="row2 web-font">
+    <text>{{Address.info}}</text>
+  </view>
+  </view>
+</view>
+<!--地址End-->
+
+<view class="space">
+</view>
+
+<!--订单信息-->
+<view class="content">
+<view class="content-left">
+<image src='../../Image/Clothes.jpg'></image>
+</view>
+<view class="content-right">
+<text class="content-line1">{{product.name}}</text>
+<text class="standard">{{product.standard}}</text>
+<text>市场参考价 RMB {{product.price}}</text>
+<text>配送物流       {{product.company}}</text>
+<text>物流单号       {{product.no}}</text>
+</view>
+</view>
+
+<!--订单信息End-->

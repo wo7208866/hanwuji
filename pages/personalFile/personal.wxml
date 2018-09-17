@@ -1,0 +1,99 @@
+<!--pages/personalFile/personal.wxml-->
+<image class='wel-bg' src='https://www.hgxrshn.com/static/Image/personal.png'></image>
+<view class='welcome'>
+  <view style='font-weight:bold;'>亲爱的绅士</view>
+  <view class='wel-text'>欢迎查看您的穿衣档案~</view>
+  <view class='wel-tip'>请您花一分钟来对他进行完善，衣当先保证您的信息绝对保密,这些信息只用于专业搭配师为您推荐最合适的着装。 </view>
+</view>
+
+<view class='infor-list web-font'>
+  <view class='listContainer'>
+    <text class='text1'>身高</text>
+    <view class='inputInner'>
+      <input class='text2' placeholder='请输入' type='text' bindinput="HeightInput" value="{{Info.height}}">{{Info.height}}</input>
+    </view>
+    <text>cm</text>
+  </view>
+  <view class='listContainer'>
+    <text class='text1'>体重</text>
+    <view class='inputInner'>
+      <input class='text2' placeholder='必填' type='text' bindinput="WeightInput" value="{{Info.weight}}">{{Info.weight}}</input>
+    </view>
+    <text>kg</text>
+  </view>
+
+  <view>
+    <text class='text1'>上衣尺码</text>
+    <picker bindchange="upPicker" value="{{index}}" range="{{upClose}}">
+      <view class='pickerInput'>
+        <input disabled='true' class='inp-text2' placeholder='请选择' type='text' bindinput="TopInput" value="{{Info.top}}">
+        </input>
+        <image src='../../Image/right-arraw.png' mode='scaleToFill'></image>
+      </view>
+    </picker>
+  </view>
+  
+  <view>
+    <text class='text1'>西裤尺码</text>
+    <picker bindchange="downPicker" value="{{index}}" range="{{downClose}}">
+      <view class='pickerInput'>
+        <input disabled='true' class='inp-text2' placeholder='请选择' type='text' bindinput="PantsInput" value="{{Info.pants}}"></input>
+        <image src='../../Image/right-arraw.png' mode='widthFix'></image>
+      </view>
+    </picker>
+  </view>
+
+  <view>
+    <text class='text1'>生日</text>
+     <picker mode="date" value="{{date}}" start="1918-09-01" end="2017-09-01" bindchange="bindDateChange">
+      <view class='pickerInput'>
+        <input disabled='true' class='inp-text2' placeholder='请选择' type='text' bindinput="BornInput" value="{{Info.born}}">
+      </input>
+        <image src='../../Image/right-arraw.png' mode='widthFix'></image>
+      </view>
+    </picker>
+  </view>
+
+  <view>
+    <text class='text1'>职业</text>
+    <picker bindchange="jobPicker" value="{{index}}" range="{{jobClose}}">
+      <view class='pickerInput'>
+        <input disabled='true' class='inp-text2' placeholder='请选择' type='text' bindinput="JobInput" value="{{Info.job}}">
+      </input>
+        <image src='../../Image/right-arraw.png' mode='widthFix'></image>
+      </view>
+    </picker>
+  </view>
+
+  <view>
+    <text class='text1'>肤色</text>
+    <picker bindchange="skinPicker" value="{{index}}" range="{{skinClose}}">
+      <view class='pickerInput'>
+        <input disabled='true' class='inp-text2' type='text' placeholder='请选择' bindinput="ColorInput" value="{{Info.color}}"></input>
+        <image src='../../Image/right-arraw.png' mode='widthFix'></image>
+      </view>
+    </picker>
+  </view>
+
+  <view>
+    <text class='text1'>常用穿衣场景</text>
+    <picker bindchange="scenePicker" value="{{index}}" range="{{sceneClose}}">
+      <view class='pickerInput'>
+        <input disabled='true' class='inp-text2' type='text' placeholder='请选择' bindinput="SceneInput" value="{{Info.scene}}"></input>
+        <image src='../../Image/right-arraw.png' mode='widthFix'></image>
+      </view>
+    </picker>
+  </view>
+
+  <view class='listContainer'>
+    <text class='text1'>身形备注</text>
+    <view class='inputInner'>
+      <input class='text2' type='text' placeholder='请输入' bindinput="RemarkInput" value="{{Info.remark}}">{{Info.remark}}</input>
+    </view>
+  </view>
+
+</view>
+
+<view class='save' bindtap="Save">
+  保存
+</view>

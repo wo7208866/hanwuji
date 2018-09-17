@@ -1,0 +1,45 @@
+/* pages/orderfinish/orderfinish.wxss */
+page{
+  background: white;
+}
+.content{
+  width:100%;
+  margin-top:100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content image{
+  width:100px;
+  height:100px;
+  background: white;
+}
+.content>text{
+  font-size:34rpx;
+  color:#b2b2b2;
+  margin-top:20rpx;
+}
+.space{
+  width:100%;
+  height:20px;
+}
+.Info{
+  display: flex;
+  flex-direction: row;
+  margin-top: 80rpx;
+}
+.Info navigator{
+  margin-top:11px;
+}
+.Info text{
+  font-size:11pt;
+  color:#AE896A;
+  
+}
+.Jump{
+  color:#CA0000!important;
+}
+.Back{
+  font-size:11pt!important;
+  color:#AE896A!important; 
+}

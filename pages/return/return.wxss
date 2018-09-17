@@ -1,0 +1,196 @@
+.pro-list{
+  padding: 30px;
+  height: 124px;
+  background: #fff;
+  margin-top: 1rpx;
+}
+.list-item{
+  display: inline-block;
+  height: 140px;
+  vertical-align: top;
+}
+.send-tip1{
+  margin-top: 40rpx;
+  color: #9b9b9b;
+  font-size: 10px;
+}
+.list-img{
+  width: 40%;
+}
+.list-img image{
+  width: 100%;
+  height: 140px;
+  background: #c7c7c7;
+}
+.list-detail{
+  width: 60%;
+  height: 112px;
+  padding-left: 5%;
+  padding-top: 5%;
+  box-sizing: border-box;
+}
+.list-name{
+  font-size: 14px;
+  color: black;
+  margin-bottom: 10px;
+}
+.list-base{
+  font-size: 12px;
+  color: #bb9a6b;
+  display: inline-block;
+  padding: 3px 7px;
+  border-radius: 4px 4px;
+  border: solid 1px #bb9a6b;
+}
+.city-select{
+  display: inline-block;
+  width: 120rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  border: solid 1px #b4b4b4;
+  border-radius: 10rpx;
+  padding-left: 20rpx;
+  vertical-align: middle;
+  color: #9b9b9b;
+  font-size: 32rpx;
+}
+.send-close{
+  padding: 15px 30px;
+  margin-top: 10px;
+  background: #fff;
+  position: relative;
+}
+.send-size{
+  margin-top: 40rpx;
+  
+}
+.sizeTitle{
+  margin-right: 20px; 
+  color: black;
+}
+.send-phone{
+  margin-left: 20px;
+}
+.send-num{
+  display: inline-block;
+  width: 180rpx;
+  border:solid 1px #9b9b9b;
+  font-size: 32rpx;
+  border-radius: 10rpx;
+  vertical-align: middle;
+  padding-left: 20rpx;
+  height: 40rpx;
+}
+.send-method{
+  width: 100%;
+}
+.send-method text{
+  display: inline-block;
+  padding: 10px 0;
+  color: #9b9b9b;
+}
+.method1{
+  width: 70%;
+}
+.method2{
+  width: 30%;
+}
+.method2-pic{
+ position: absolute;
+ right: 30px;
+ top: 80px;
+ width: 200rpx;
+ height: 200rpx;
+}
+.method2-pic image{
+  width: 200rpx;
+}
+.input-tip{
+  font-size: 28rpx;
+}
+.input-text{
+  margin-top: 15px;
+}
+.send-tip{
+  margin-top: 30px;
+  font-size: 10px;
+  color: #9b9b9b;
+  line-height: 22px;
+}
+.input-text text,.picker{
+  color:black;
+}
+.bottom_tip{
+  padding: 30px;
+  font-size: 10px;
+  color: #9b9b9b;
+  height: 300px;
+  margin-top: 8px;
+  background: #fff;
+  line-height: 20px;
+
+}
+.detail-title{
+  font-size: 16px;
+  color: black;
+  line-height: 35px;
+}
+.submit{
+  background:linear-gradient(to right,#DDCAA0,#BB9A6B);
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-radius: 0;
+}
+.success-text1{
+  color: #9b9b9b;
+  font-size: 14px;
+  line-height: 30px;
+}
+.success-text2{
+  color: #9b9b9b;
+  font-size: 12px;
+  line-height: 20px;
+}
+.success-text3{
+    font-size: 14px;
+  line-height: 30px;
+    color: #9b9b9b;
+}
+.success-tip view{
+text-align: center;
+}
+.success-save{
+  height: 50px;
+  color: #fff;
+  font-size: 18px;
+  background: #a0806b;
+  line-height: 50px;
+  margin-top:30px;
+}
+.success-tip icon{
+  margin-top: 40px;
+  display: inline-block;
+}
+.success-tip{
+  position: absolute;
+  top: 200px;
+  width: 100%;
+  background: #fff;
+  z-index: 99999;
+  text-align: center;
+}
+.bg-indexShow{
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 700px;
+}
+.msgSize{
+  font-size: 32rpx;
+}
+
+.downGray{
+  width: 30rpx;
+  margin-left: 10rpx;
+}

@@ -1,0 +1,13 @@
+<view class='other-title'>充值记录</view>
+<view class='recoder-item' wx:for="{{Info}}">
+    <view class='other-money'>
+      <view class='other-money-icon'>
+          <image src='../../Image/dis1.png'></image>
+       </view>
+      <view class='other-money-name'>
+        <view>消费</view>
+        <view>{{item.time}}</view>
+      </view>
+      <view class='other-money-num'>+{{item.money}}元</view>
+  </view>
+</view>

@@ -1,0 +1,77 @@
+<!--pages/mine/mine.wxml-->
+
+<!--会员卡-->
+<view class="title">
+    <view class="card-vip">
+     <image class='vip-bg1' src='https://www.hgxrshn.com/static/Image/vip.png'></image>
+      <view class="user">
+        <image class='user_pci' src='{{UserImage}}'></image>
+        <view style="margin-top:10px;" class='web-font'>{{UserName}}</view>
+      </view>
+      <view class='logo-img'>
+         <image src='../../Image/logo1.png'></image>
+      </view>
+      <view class="vip">
+        <view  class='web-font'>品质生活</view>
+        <view  class='web-font'>从拥有一套礼服开始</view>
+      </view>
+
+    </view>
+     
+</view>
+
+<!--会员卡End-->
+
+<!--我的订单-->
+<view class="MyOrder">
+     <view class='MyOrder-title web-font'>会员尊享权益  <image class='title-image' src='../../Image/king.png'></image></view>
+     <view class='MyOrder-container web-font'>
+          <view class='MyOrder-item' data-index="0"  bindtap='myOrder'>
+            <image src='../../Image/icon-2-08.svg'></image>
+            <view>往返免运费</view>
+          </view>
+          <view class='MyOrder-item small-scale' data-index="1"  bindtap='myOrder'>
+            <image src='../../Image/vip-icon2.png'></image>
+            <view>无限制穿西装</view>
+          </view>
+          <view class='MyOrder-item small-scale' data-index="2" bindtap='myOrder'>
+            <image src='../../Image/tone.png'></image>
+            <view>五星专业护理</view>
+          </view>
+          <view class='MyOrder-item small-scale' data-index="3" bindtap='myOrder'>
+            <image src='../../Image/vip-icon1.png'></image>
+            <view>大牌西装尽享</view>
+          </view> 
+     </view>
+
+</view>
+
+<view class="credit">
+   <navigator url=''>
+       <view class='credit-title '>月卡 
+           <text class="title-icon">RMB 499</text>
+       </view>
+   </navigator>
+    
+      <view class='credit-title '> 有效期
+            <text class="title-icon">30天</text>
+       </view>
+       <view class='credit-title '>押金 
+             <text class="title-icon">RMB {{Info.deposit}}</text>
+       </view>
+       <view class='credit-title '>优惠活动-新人立减 
+             <text class="title-icon">RMB {{Info.new}}</text>
+       </view>
+      <navigator url='../select-discount/select-discount'>
+          <view class='credit-title '>优惠券 
+              <text class="title-icon">{{CouponInfo}} ></text>
+          </view>
+       </navigator>
+</view>
+<!-- 底部菜单栏 -->
+<view class='last-price'>￥{{Money}}</view>
+
+<view class='confirm-buy'>
+  <text class='green-btn' bindtap="Buy">直接购卡</text>
+  <text class='red-btn'>免押购卡</text>
+</view>

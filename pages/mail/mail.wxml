@@ -1,0 +1,25 @@
+<view class='come '>
+  <view class='pro-list'>
+    <view class='list-img list-item'>
+      <image src='{{item.img}}'></image>
+    </view>
+    <view class='list-detail list-item'>
+      <view class='list-name web-font'>{{product.name}}</view>
+      <view class='size-infor web-font'>尺码：{{product.standard}}</view>
+      <view class='list-base'>订单编号：{{product.no}}</view>
+      <view class='list-select'>下单时间：{{product.time}}</view>
+      <view class='list-select'>配送方式：{{product.company}}</view>
+    </view>
+  </view>
+</view>
+<view class='send-step'>
+  <view class='step-item' wx:for="{{Info}}" wx:key="index">
+    <view class='step-item-num'>
+      <view>{{item.detail}}</view>
+      <view>{{item.time}}
+        <text class='send-time'></text>
+      </view>
+    </view>
+    <view class='step-icon'></view>
+  </view>
+</view>

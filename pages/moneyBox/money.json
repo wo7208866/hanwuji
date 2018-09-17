@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "i-badge": "../../dist/badge/index",
+    "i-toast": "../../dist/toast/index"
+  },
+  "navigationBarTitleText": "钱包账户"
+}

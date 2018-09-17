@@ -1,0 +1,166 @@
+.phone_toast .font-center{
+  text-align: left;
+  color: black;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+.title{
+  font-size: 16px;
+  margin-top: 20px;
+  color: black;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.phone_toast .toast-content{
+  width: 300px;
+  display: inline-block;
+  padding: 10px 0;
+  background: #fff;
+    box-shadow: 1px 2px 2px #c7c7c7;
+    position: relative;
+}
+
+.phone_toast{
+  width: 100%;
+ font-size: 12px;
+ text-align: center;
+ position: fixed;
+ top: 160px;
+ z-index: 9999;
+}
+.phone-text view{
+  position: relative;
+}
+.phone-text-icon{
+  position: absolute!important;
+  top: 2px;
+  left: 2px;
+  height: 20px;
+  width: 27px;
+  border-right: 1px solid #bb9a6b; 
+}
+.phone-text-icon image{
+  height: 20px;
+  width: 15px;
+  background: #fff;
+}
+
+.phone-text{
+  padding: 0 20px;
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.inp-text{
+  color:#dfdfdf;
+  font-size: 14px;
+}
+.phone_toast input{
+  width: 215px;
+  height: 28px;
+  border-bottom: solid 1px #dfdfdf;
+  vertical-align: middle;
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 14px;
+  padding-left: 45px;
+}
+
+.phone-message{
+  width: 107px!important;
+  display: inline-block;
+  font-size: 14px;
+}
+
+
+.phone_toast .toast-inp text{
+  display: inline-block;
+  width: 25%;
+  margin-right: 10%;
+  color: blue;
+  text-decoration: underline;
+  text-align: right;
+}
+.getphone-num{
+  display: inline-block;
+  border-radius: 15px 15px;
+  padding: 3px 10px;
+  width: 60px;
+  text-align: center;
+  font-size: 12px;
+  color: #bb9a6b;
+  border: solid 1px #bb9a6b;
+  margin-left: 25px;
+}
+.phone_toast button{
+  width: 100px;
+  font-size: 14px;
+  background:linear-gradient(to right,#DDCAA0,#BB9A6B);
+  color: white;
+  height: 28px;
+  line-height: 28px;
+  margin-top: 5px;
+}
+
+.toast .font-center{
+  text-align: center;
+  color: black;
+}
+.toast .toast-content{
+  width: 250px;
+  display: inline-block;
+  border: solid 1px #c7c7c7;
+  padding: 10px 0;
+  background: #fff;
+}
+.toast{
+  width: 100%;
+ font-size: 12px;
+ text-align: center;
+ position: fixed;
+ top: 300px;
+}
+
+.toast .toast-inp{
+  width: 100%;
+  margin: 10px 0;
+}
+.toast input{
+  margin-left:10%;
+  width: 50%;
+  display: inline-block;
+  border: solid 1px #b8b8b8;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+.toast .toast-inp text{
+  display: inline-block;
+  width: 25%;
+  margin-right: 10%;
+  color: blue;
+  text-decoration: underline;
+  text-align: right;
+}
+.phone_toast button{
+  width: 150px;
+  font-size: 14px;
+  background:linear-gradient(to right,#DDCAA0,#BB9A6B);
+  color: white;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 20px 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.close-btn{
+  width: 16px;
+  height:16px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: #fff;
+}
+
+ 

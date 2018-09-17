@@ -1,0 +1,73 @@
+<view wx:if='{{indexShow}}'>
+  <view class='come'>
+    <view class='pro-list'>
+      <view class='list-img list-item'>
+        <image src='{{product.img}}'></image>
+      </view>
+      <view class='list-detail list-item'>
+        <view class='list-name'>订单包裹:{{product.name}}</view>
+        <view class='send-size'>
+          <text class='sizeTitle'>尺码：</text>
+          <text class='list-base'>{{product.standard}}</text>
+        </view>
+        <view class="send-tip1">提示：归还时请仔细确认商品数量,尽量保持包裹完整</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='send-close web-font'>
+    <view class='send-method'>
+      <text class='method1'>方法一</text>
+      <text class='method2'>方法二</text>
+    </view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker">
+        <text class='msgSize'>快递物流：</text>
+        <view class='city-select'>
+          <text>{{array[index]}}</text>
+          <image class='downGray' src='../../image/down-gray.png' mode='widthFix'></image>
+        </view>
+
+      </view>
+    </picker>
+    <view class='input-text'>
+      <text class='msgSize'>快递单号：</text>
+      <input class='send-num' bindinput="DeliveryNo" placeholder-class="input-tip" type='text' placeholder='请输入单号' value=''></input>
+    </view>
+    <view class='input-text'>
+      <text class='msgSize'>再次确认：</text>
+      <input class='send-num' bindinput="DeliveryNoCheck" placeholder-class="input-tip" placeholder='请确认单号' type='text' value=''></input>
+    </view>
+    <view class='send-tip'>
+      <view>提示：归还地址统一填写********</view>
+      <view>收件人：***
+        <text class='send-phone'>电话：***********</text>
+      </view>
+    </view>
+    <view class='method2-pic'>
+      <image src='../../Image/method2.png' mode='widthFix'></image>
+    </view>
+  </view>
+  <view class='web-font bottom_tip'>
+    <view class='detail-title'> 还衣说明</view>
+    <view>快速选择到付即可,由衣当先为您买单;</view>
+    <view>订单提交归还后即可开启新一轮的租赁享受,无需等待收货，提前</view>
+  </view>
+  <view>
+    <button class='submit' bindtap='submitReturn'>提交归还</button>
+  </view>
+</view>
+<view wx:if="{{tipShow}}" class='bg-indexShow'>
+  <view class='success-tip'>
+
+    <icon type='success' color='#a08069' size='40'></icon>
+    <view class='success-text1'>此订单的还衣信息已提交</view>
+    <view class='success-text2'>快去开启新一轮的穿衣体验吧，更多礼服静候您</view>
+    <view class='success-text3'>
+      物流:
+      <text>顺丰快递</text> 单号:
+      <text>1234567890</text>
+    </view>
+    <view class='success-save' bindtap='forIndex'>确认</view>
+  </view>
+</view>

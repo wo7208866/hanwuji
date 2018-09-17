@@ -1,0 +1,62 @@
+/* pages/login/login.wxss */
+page{
+  background: #ebebeb;
+}
+.login-box view{
+   text-align: center;
+   font-size: 14px;
+   color: black;
+   position: relative;
+   margin-bottom: 20px;
+}
+.login-box input{
+  width: 90%;
+  border-bottom: solid 1px #d6d6d6;
+  height: 40px;
+  display: inline-block;
+  line-height: 50px;
+  text-align: left;
+  z-index: 1;
+  padding-left: 10%;
+}
+.login-box{
+  text-align: center;
+  width: 80%;
+  display: inline-block;
+  background: #fff;
+  padding: 30px 20px;
+  margin-top: 100px;
+}
+.login{
+  text-align: center;
+}
+.get-num{
+  position: absolute;
+  top:0;
+  font-size: 14px;
+  right: 2px;
+  display: inline-block;
+  height: 37px;
+  line-height: 37px;
+  background: #d6d6d6;
+  color: white;
+  z-index: 99999;
+}
+.login-btn{
+  display: inline-block;
+  width: 70%;
+  background:linear-gradient(to right,#DDCAA0,#BB9A6B);
+  font-size: 16px;
+  color: white;
+  margin-top: 20px;
+}
+.input-text{
+  color: #C5A690;
+}
+navigator{
+  display: inline-block;
+  color:#C5A690;
+  position: absolute;
+  left: 40rpx;
+  top:10rpx;
+}

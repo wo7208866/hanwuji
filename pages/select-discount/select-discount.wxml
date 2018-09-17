@@ -1,0 +1,18 @@
+<!--pages/select-discount/select-discount.wxml-->
+<view class="section">
+
+  <view class='qu-list' wx:for="{{Coupon}}" wx:key="index" data-id="{{item.id}}" data-info="{{item.price}}" bindtap="Select">
+    <view class='qu-text'>
+      <view class='qu-name'>{{item.name}}</view>
+      <view>
+        <text class='qu-price'>￥{{item.price}} </text>
+        <text class='condition'>{{item.condition}}</text>
+      </view>
+      <view class='qu-time qu-ti'>使用时间
+        <text class='qu-data'>{{item.time}}</text>
+      </view>
+    </view>
+    <view class='qu-img'>
+    </view>
+  </view>
+</view>

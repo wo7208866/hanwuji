@@ -1,0 +1,11 @@
+
+<view class='other-title'>消费明细</view>
+<view class='other-item' wx:for="{{Info}}">
+    <view class='other-money'>
+      <view class='other-money-name'>
+        <view>消费</view>
+        <view>{{item.time}}</view>
+      </view>
+    <view class='other-money-num'>-{{item.money}}元</view>
+  </view>
+</view>

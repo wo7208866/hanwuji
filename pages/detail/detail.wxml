@@ -1,0 +1,102 @@
+<view class='main_content'>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="index">
+      <swiper-item class="swiper_item">
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='product-detail web-font'>
+    <view class='detail-label'>
+      <text class='lable-text'>{{product.describe}}</text>
+      <text class='label-sign'>{{product.label}}</text>
+    </view>
+    <view class='product-name web-font'>{{product.name}}</view>
+    <view class='product-price web-font'>￥{{product.price}}</view>
+  </view>
+  <view class='size-box web-font'>
+    <view>尺码</view>
+    <view class='size-item'>
+      <text class="{{standard_type==item.id?'active':''}}" wx:for="{{standard_list}}" wx:key="" data-id="{{item.id}}" data-txt="{{item.name}}" bindtap="StandardPicker">{{item.name}}</text>
+    </view>
+
+  </view>
+  <view class='size-box web-font'>
+    <view>配饰</view>
+
+    <view class='decrite-select'>
+      <view class="{{decrite[0]?'decrite-active':''}}" bindtap='selectDecr' data-index='0'>不需要配饰</view>
+      <view class="{{decrite[1]?'decrite-active':''}}" bindtap='selectDecr' data-index='1'>带配饰组合</view>
+      <view class="{{decrite[2]?'decrite-active':''}}" bindtap='selectDecr' data-index='2'>领结配饰组合</view>
+    </view>
+  </view>
+  <view class='detail_address web-font'>
+    <view class='address-tip'>
+      <view>
+        <text class='adress_city web-font'>支持配送城市</text>
+        <text class='adress_no'>部分地区暂不支持配送，还请谅解</text>
+      </view>
+    </view>
+    <view class='pickerInner'>
+      <picker range='{{array}}' value='{{index}}' bindchange='chooseAdd'>
+        <view>
+          <text>{{userAdd}}</text>
+          <image class='AddBtn' src='../../Image/down.png' mode='widthFix'></image>
+        </view>
+      </picker>
+    </view>
+
+  </view>
+
+  <view class='product-detail last'>
+    <view class='product-title web-font'>
+      商品详情简介
+    </view>
+    <view class="product-pic">
+      <image mode="widthFix" src='{{product.img}}'></image>
+    </view>
+  </view>
+
+  <view class='detail-footer'>
+    <view class='footer-item1' bindtap='GoHome'>
+      <image src='../../Image/home.svg'></image>
+    </view>
+    <view class="footer-space">
+      <view class="space-line">
+      </view>
+    </view>
+    <view class='footer-item2' bindtap='GoCart'>
+      <i-badge count="{{Count}}" class="badge">
+      </i-badge>
+      <image src='../../Image/mine.svg'></image>
+    </view>
+    <view class='footer-item3' bindtap='submit'>
+      加入专属衣柜
+    </view>
+  </view>
+
+
+  <view class="bg" style='display:{{condition == true ? "block":"none"}};' bindtap='CloseBg'></view>
+
+  <view class='open_sure web-font' wx:if="{{condition}}">
+    <view class='confirm-body'>
+      <view class="confirm-content">
+        <view class="confirm-title">
+          蓝色毛麻时尚休闲西服
+        </view>
+        <view class="confirm-standard">
+          <view style="color:#888888;margin-top:20px;display:inline-block;">尺码</view>
+
+          <text class="select-standard">{{select_standard}}</text>
+        </view>
+      </view>
+      <image class="confirm-pic" src="{{product.thumbnail}}"></image>
+    </view>
+    <view class='btn_box'>
+      <button class='confirm' bindtap="AddCart">确认</button>
+    </view>
+  </view>
+
+</view>
+
+<i-toast id="toast" />

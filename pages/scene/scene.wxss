@@ -1,0 +1,408 @@
+/* pages/scene/scene.wxss */
+
+.Swiper {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+.slide-image {
+  width: 100%;
+  height: 300px;
+}
+
+.swiper-box {
+  height: 300px;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+
+.Info {
+  width: 100%;
+  height: 100px;
+}
+
+.detail_pic {
+  width: 100%;
+  height: 100px;
+  background: #d6d6d6;
+}
+
+.detail-image {
+  height: 95px;
+  width: 100%;
+}
+
+.Info-image {
+  width: 100%;
+  height: 100%;
+}
+
+.Event {
+  width: 100%;
+  height: 80px;
+  margin-top: 5px;
+}
+
+.gooditem {
+  width: 100%;
+  text-align: center;
+  background: #fff;
+}
+
+.imgview {
+  width: 118px;
+  display: inline-block;
+}
+
+.imgview image {
+  width: 110px;
+  height: 120px;
+  margin-top: 10px;
+  background: none;
+}
+
+.tabTit {
+  height: 90rpx;
+  line-height: 90rpx;
+  width: 750rpx;
+  z-index: 1;
+  display: inline-block;
+  background: #ffff;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.tabTit .active {
+  color: #bb9a6b;
+  background: #fff;
+}
+
+.tabTit image {
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.tabLayer {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+  width: 750rpx;
+  overflow: hidden;
+  z-index: 1;
+  background: #fff;
+  padding-bottom: 26rpx;
+  border-bottom: solid 1px #eee;
+}
+
+.tabLayer text {
+  width: 210rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  float: left;
+  border: solid 1px #eee;
+  margin: 20rpx 0 0 26rpx;
+}
+
+.tabLayer .active {
+  color: #bb9a6b;
+  border-color: #bb9a6b;
+}
+
+.case {
+  height: 640rpx;
+  margin: 30rpx auto 0;
+  background: #fff;
+  border: solid 1px #f1f1f1;
+  overflow: hidden;
+}
+
+.case .title {
+  font-size: 32rpx;
+  color: #000;
+  margin-top: 5rpx;
+}
+
+.case .title, .case .tag {
+  padding: 0 5rem 0 15px;
+}
+
+.case .tag {
+  font-size: 28rpx;
+}
+
+.case .pic {
+  width: 100%;
+  height: 510rpx;
+}
+
+.case .headPic {
+  right: 10px;
+  top: 455rpx;
+}
+
+.case .headPic image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  border: solid 6rpx #fff;
+}
+
+.case .headPic text {
+  display: block;
+  font-size: 28rpx;
+  margin-top: -6rpx;
+}
+
+.flex1 {
+  width: 100px;
+  display: inline-block;
+  height: 40px;
+  position: relative;
+  text-align: center;
+}
+
+.tabs_img {
+  background: #fff;
+  width: 70px;
+  height: 36px;
+}
+
+.tab_bg {
+  width: 306px;
+  box-shadow: 0px -1px 5px #e1e2e6,
+                -1px 0px 5px #e1e2e6,
+                1px 0px 5px #e1e2e6,
+                0px 1px 5px #e1e2e6;
+  display: inline-block;
+  text-align: center;
+  height: 45px;
+  line-height: 40px;
+}
+
+.tab_bg text {
+  color: black;
+}
+
+.flex1_text {
+  width: 100%;
+  height: 23px;
+  display: inline-block;
+  border-right: 1px solid black;
+  vertical-align: middle;
+  line-height: 23px;
+}
+
+.item_pic {
+  height: 16px;
+  width: 1px;
+  background: #bdbdbd;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  right: 0;
+  top: 12px;
+}
+
+.welfare-container {
+  background: #ffff;
+}
+
+.welfares {
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 10px 5px;
+}
+
+.welfares-good {
+  height: 680rpx;
+  width: 47%;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  position: relative;
+  display: inline-block;
+  font-size: 24rpx;
+}
+
+.welfares-image {
+  width: 100%;
+  max-height: 250px;
+  display: inline-block;
+  border: 1px #eee solid;
+}
+
+.welfares-good .product-name {
+  color: #ae896a;
+  text-align: left;
+  margin: 0px 5px;
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+.product-price-wrap .product-price-new {
+  color: #bb9a6b;
+  font-size: 16px;
+  margin-left: 5px;
+  font-weight: 900;
+}
+
+.product-price-wrap .product-price-old {
+  color: #888;
+  text-decoration: line-through;
+  padding-left: 2px;
+}
+
+.product-price-wrap .discount {
+  position: absolute;
+  right: 5px;
+  background-color: #000;
+  color: #fff;
+}
+
+/*  加载更多   */
+
+.weui-loading {
+  margin: 0 5px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-animation: weuiLoading 1s steps(12, end) infinite;
+  animation: weuiLoading 1s steps(12, end) infinite;
+  background-size: 100%;
+}
+
+.weui-loadmore {
+  width: 65%;
+  margin: 1.5em auto;
+  line-height: 1.6em;
+  font-size: 12px;
+  text-align: center;
+}
+
+.weui-loadmore__tips {
+  display: inline-block;
+  vertical-align: middle;
+  color: #888;
+}
+
+.welfares-good .brand-name {
+  color: #000;
+  text-align: left;
+  margin: 0px 5px;
+  margin-bottom: 5px;
+  font-size: 32rpx;
+}
+
+.demo-container {
+  width: 80vw;
+  height: 100vh;
+  background: #fff;
+}
+
+.drawer-content {
+  width: 100%;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.drawer-title {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.title-text {
+  font-size: 20px;
+  color: red;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 32rpx;
+  margin-left: 10px;
+}
+
+.condition {
+  margin-top: 10px;
+}
+
+.condition-button0 {
+  font-size: 12px;
+  text-align: center;
+  color: white;
+  background:linear-gradient(to right,#DDCAA0,#BB9A6B);
+  height: 30px;
+  line-height: 30px;
+  width: 80px;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.condition-button1 {
+  font-size: 26rpx;
+  text-align: center;
+  color: black;
+  background: #f0f0f0;
+  height: 30px;
+  line-height: 30px;
+  width: 80px;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.container-scroll {
+  background: white;
+}
+
+.Clear {
+  display: inline-block;
+  width: 40%;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #353535;
+  font-size: 32rpx;
+  color: white;
+  border-radius: 0;
+}
+
+.Done {
+  display: inline-block;
+  width: 60%;
+  height: 100rpx;
+  line-height: 100rpx;
+  background:linear-gradient(to right,#DDCAA0,#BB9A6B);
+  font-size: 32rpx;
+  color: white;
+  border-radius: 0;
+}
+
+.Space {
+  width: 100%;
+  height: 40px;
+}
+
+.Control {
+  width: 100%;
+  height: 100rpx;
+  float: bottom;
+  margin-bottom: -5px;
+}
+
+.active-img {
+  width: 35px;
+  height: 2px;
+  position: absolute;
+  display: inline-block;
+  bottom: 0px;
+  left: 35px;
+  background:linear-gradient(to right,#DDCAA0,#BB9A6B);
+}

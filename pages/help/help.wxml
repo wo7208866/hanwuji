@@ -1,0 +1,53 @@
+<view class='help-img'>
+    <image src='https://www.hgxrshn.com/static/Image/help.png'></image>
+</view>
+
+<view class='help-list'>
+   <navigator url='../description-word/description-word?index=1'>
+      <view>
+          <text class='help-text1'>租赁说明</text>
+          <image class='help-text3' src='../../Image/right-arraw.png' mode='widthFix'></image>
+       </view>
+   </navigator>
+   <navigator url='../description-word/description-word?index=2'>
+      <view>
+          <text class='help-text1'>还衣说明</text>
+          <image class='help-text3' src='../../Image/right-arraw.png' mode='widthFix'></image>
+       </view>
+   </navigator>
+    <navigator url='../description-word/description-word?index=3'>
+      <view>
+          <text class='help-text1'>物流说明</text>
+          <image class='help-text3' src='../../Image/right-arraw.png' mode='widthFix'></image>
+       </view>
+   </navigator>
+    <navigator url='../description-word/description-word?index=4'>
+      <view>
+          <text class='help-text1'>清洁说明</text>
+          <image class='help-text3' src='../../Image/right-arraw.png' mode='widthFix'></image>
+       </view>
+   </navigator>
+    <navigator url='../description-word/description-word?index=5'>
+      <view>
+          <text class='help-text1'>会员说明</text>
+          <image class='help-text3' src='../../Image/right-arraw.png' mode='widthFix'></image>
+       </view>
+   </navigator>
+    <navigator  url='../description-word/description-word?index=6'>
+      <view>
+          <text class='help-text1'>赔付说明</text>
+          <image class='help-text3' src='../../Image/right-arraw.png' mode='widthFix'></image>
+       </view>
+   </navigator>
+      <view class='inline-help'>
+          <text class='help-text1'>在线客服</text>
+          <image class='help-text3' src='../../Image/right-arraw.png' mode='widthFix'></image>
+          <button open-type='contact'>按钮</button>
+      </view>
+    <navigator  url='../telephone/telephone'>
+      <view>
+          <text class='help-text1'>电话客服</text>
+          <image class='help-text3' src='../../Image/right-arraw.png' mode='widthFix'></image>
+       </view>
+   </navigator>
+</view>

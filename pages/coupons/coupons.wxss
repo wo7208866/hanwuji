@@ -1,0 +1,87 @@
+/* pages/coupons/coupons.wxss */
+.swiper-tab{  
+    width: 100%;  
+    border-top: 1px solid #777777;  
+    border-bottom: 1px solid #777777;  
+    text-align: center;  
+    line-height: 80rpx;
+}  
+.swiper-tab-list{  
+  font-size: 30rpx;  
+    display: inline-block;  
+    width: 33%;  
+    color: #777777;  
+}
+.on{ 
+  color: #f26d5f;  
+  border-bottom: 3px solid #f26d5f;
+}    
+.cart_container {
+  display: flex;
+  flex-direction: row;
+  background-color: #FFFFFF;
+  margin-bottom: 10rpx;
+}
+.title {
+  font-size: 32rpx;
+  margin-top: 5rpx;
+}
+.title-limit {
+  font-size: 25rpx;
+  margin-top: 5rpx;
+}
+.title-period {
+  font-size: 25rpx;
+  margin-top: 5rpx;
+}
+.item-image {
+  width: 220rpx;
+  height: 220rpx;
+  margin: 20rpx;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  margin-left:20px;
+}
+.handle{
+  display: flex;
+  flex-direction: row;
+  margin-top:10px;
+}
+.handle-button{
+    width:55px;
+    height:25px;
+    border: none;
+    color: #80848f;
+    text-decoration: none;
+    text-align: left;
+    display: block;
+    border-radius: .21267rem;
+    line-height: 25px;
+    -webkit-appearance: none;
+    background: none;
+    padding: 0 .26667rem;
+    margin: 0;
+    white-space: nowrap;
+    position: relative;
+    text-overflow: ellipsis;
+    font-size: 10px;
+    font-family: inherit;
+    cursor: pointer;
+    user-select: none;
+}
+.handle-button::after{
+  border: none;
+}
+.coupon_contains{
+  width: 90%;
+  background: #f2f2f2;
+  margin-top:20px;
+  height:85px;
+}
+.coupon_body{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

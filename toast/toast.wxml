@@ -1,0 +1,15 @@
+<view class='toast' hidden="{{modalHidden}}">
+    <view class="toast-content">
+        <view class='font-center title'>获取验证码</view>
+        <view class='font-center'>我们将向您的手机发送一个4位验证码</view>
+        <view class='toast-text'>
+              <view class='toast-icon'><image src='../Image/checkNum.png'></image></view>
+              <input class='phone-message' placeholder-class='inp-text' type='text' placeholder='请输入验证码' bindinput='Message'></input>
+              <text class='getphone-num' bindtap="Submit">{{time}}</text>
+          </view>
+        <view>
+            <button bindtap='next'>下一步</button>
+        </view>
+        <image class='close-btn' src='../Image/close.svg' bindtap='clickHidden'></image>
+    </view>
+</view>

@@ -1,0 +1,106 @@
+/* pages/select-discount/select-discount.wxss */
+.section{
+  text-align: center;
+
+}
+
+.qu-list,.qu-list2{
+  width: 80%;
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  text-align: left;
+  margin-top: 15px;
+  height: 80px;
+  position: relative;
+  color: black;
+  font-size: 16px;
+}
+.qu-text{
+  display: inline-block;
+  width: 60%;
+}
+.qu-list{
+   color: #a0806b;
+}
+.qu-list2{
+  color: #848484;
+}
+.qu-img{
+  width:90px;
+  display: inline-block;
+  height: 100px;
+  background: #a0806b;
+  vertical-align: top;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+ .condition{
+  font-size: 10px;
+  margin-left: 20px;
+}
+.qu-list .qu-time{
+  font-size: 10px;
+  padding: 2px 5px;
+  background: #a0806b;
+  color: #fff;
+  border-radius: 4px 4px;
+  margin-top: 10px;
+  text-indent: 1em;
+}
+.qu-list2 .qu-time{
+  font-size: 10px;
+  padding: 2px 5px;
+  background: #848484;
+  color: #fff;
+  border-radius: 4px 4px;
+  margin-top: 10px;
+  text-indent: 1em;
+}
+
+.qu-data{
+  margin-left: 40px;
+}
+
+.qu-img-no{
+   width:90px;
+  display: inline-block;
+  height: 100px;
+  background: #a2a2a2;
+  vertical-align: top;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.change-qu{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.change-qu input{
+  width: 70%;
+  display: inline-block;
+  border: solid 2px #9b9b9b;
+  height: 35px;
+  border-radius: 3px 3px;
+  margin-top: 50px;
+}
+.change-qu button{
+  width: 35%;
+  height: 38px;
+  margin-top: 50px;
+  line-height: 35px;
+  background: #ca0000;
+  color: white;
+}
+ .qu-name{
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 3px;
+}
+.qu-price{
+  font-size: 24px;
+  font-weight: bolder;
+}

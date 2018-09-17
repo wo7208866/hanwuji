@@ -1,0 +1,62 @@
+/* pages/honor/honor.wxss */
+text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text1{
+  display: inline;
+}
+.list-item{
+  background: #fff;
+  margin-top: 2rpx;
+  padding: 20rpx 80rpx;
+  box-sizing: border-box;
+  justify-content: space-between;
+  font-size: 24rpx;
+  position: relative;
+  color: #9b9b9b;
+}
+picker{
+  width: 50%;
+}
+picker image{
+  width: 20rpx;
+  height: 20rpx;
+  margin-left: 10rpx;
+}
+.picker{
+  padding: 5rpx 10rpx;
+  border: 1px solid #9b9b9b;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+}
+.inputInner{
+  width: 27%;
+  position: relative;
+  left: -135rpx;
+  top: -5rpx;
+}
+.sendMsg{
+  border: 1px solid #9b9b9b;
+  width: 22%;
+  font-size: 24rpx;
+  height: 45rpx;
+  line-height: 45rpx;
+  text-align: center;
+  border-radius: 25rpx;
+  position: absolute;
+  right: 30rpx;
+}
+.inputInner1{
+  position: relative;
+  left: -30rpx;
+}
+.btn-box{
+  padding: 30rpx 80rpx;
+}
+.btn-box button{
+  background:linear-gradient(to right,#DDCAA0,#BB9A6B);
+  font-size: 32rpx;
+  color: #fff;
+}

@@ -1,0 +1,42 @@
+<view class='baner-img'>
+   <image src='https://www.hgxrshn.com/static/Image/discount.jpg'></image>
+</view>
+<view class='rule-text'>
+    <view class='rule-title'>活动概述</view>
+    <view class='rule-text1'>
+        会员邀请好友，多重好礼领不停。将你的专属邀请码发给好友,不仅好友可得50元优惠券用于会员支付减免，自己还可获得邀请奖励累计，成功邀请越多，最终奖励越丰厚。
+    </view>
+    <view class='rule-title'>活动规则</view>
+    <view class='rule-text2'>
+        <view>1. 好友成功注册后需要在此页面填写你的邀请码才算作邀请成功；</view>
+        <view>2. 同一用户只可被邀请一次，如果已被其他朋友邀请则无法再次邀请；</view>
+        <view>3. 好友注册成功并开通会员后，你可以获得价值199元白衬衫一件，将随下一次租赁衣箱一起寄出。
+              Ps：衬衫奖励只可领取一次；
+        </view>
+        <view class='rule-item4'> 4. 成功邀请3名好友注册，可获得<text class='red-font'>30</text>元优惠券一张；
+            <view>成功邀请6名好友注册，可获得<text class='red-font'>60</text>元优惠券一张；</view>
+            <view>成功邀请10名好友注册，可获得<text class='red-font'>100</text>元优惠券一张；</view>
+        </view>
+        <view>5. 请勿恶意参与活动，如发现违规行为，有权取消账户内已有优惠券。</view>
+    
+    </view>
+</view>
+<view class='invite-num'>
+  <view class='invite-title'>我的专属邀请码</view>
+  <view class='personal-invite'>
+        <text class='invite-num-1'>{{Code}}</text>
+        <text class='invite-friend web-font'>邀请好友</text>
+  </view>
+  <view class='invite-tip'>我的邀请进度  （{{Process}}/10）</view>
+</view>
+<view class='invite-num '>
+  <view class='invite-title'>邀请码填写</view>
+  <view class='submit-box save'>
+    <input  type='text' placeholder='请输入邀请码' bindinput='CodeInput'></input>
+    <text bindtap="Submit" >提交</text>
+  </view>
+  <view class='invite-tip'>成功注册并填写邀请码，好友可获得代金券奖励</view>
+  <view class='invite-tip'>成功开通会员后，好友可获得额外奖励</view>
+</view>
+
+<view class='footer'></view>

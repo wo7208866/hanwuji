@@ -1,0 +1,59 @@
+<view>
+  <view class='rest-money'>
+    <navigator url="../cost-detail/cost">
+      <image src='../../Image/user.png'></image>
+      <text>账户余额</text>
+      <text class='strong'> ￥{{Info.money}}</text>
+      <image class='go-for' src='../../Image/jump-b.svg'></image>
+    </navigator>
+  </view>
+  <view class='add-money'>
+
+    <view class='add-money-text1'>
+      <image src='../../Image/increase.png' />
+      <text bindtap='Charge'>充值</text>
+    </view>
+
+    <view class='add-money-text3 border-line'>
+      <image src='../../Image/moneyS.png' />
+      <text>{{Info.deposit}}押金</text>
+    </view>
+
+  </view>
+  <view class='money-list'>
+    <navigator url="../fea-recoder/recoder">
+      <image src='../../Image/money-icon1.png'></image>
+      <text class='money-text1'>消费明细</text>
+      <image class='money-text2' src='../../Image/jump-y.svg'></image>
+    </navigator>
+  </view>
+  <view class='money-list'>
+    <navigator url="../increase-recoder/increase">
+      <image src='../../Image/money-icon2.png'></image>
+      <text class='money-text1'>充值记录</text>
+      <image class='money-text2' src='../../Image/jump-y.svg'></image>
+    </navigator>
+  </view>
+  <view class='money-list'>
+    <navigator url="../telephone/telephone">
+      <image src='../../Image/money-icon3.png'></image>
+      <text class='money-text1'>赔付退款</text>
+      <image class='money-text2' src='../../Image/jump-y.svg'></image>
+    </navigator>
+  </view>
+</view>
+
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{visible}}"></view>
+<view class="modal-dialog" wx:if="{{visible}}">
+  <view class="modal-content">
+    <text>小提示</text>
+    <input type='text' placeholder='请输入充值金额' value="" bindinput="MoneyInput"></input>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">充值</view>
+  </view>
+</view>
+
+
+<i-toast id="toast" />

@@ -1,0 +1,49 @@
+<form bindsubmit='formSubmit'>
+  <view class='list-item box'>
+    <text>姓名</text>
+    <view class='inputInner1'>
+      <input placeholder='请输入你的真实姓名' name='uname'></input>
+    </view>
+  </view>
+
+  <view class='list-item box'>
+    <text>身份证号</text>
+    <view class='inputInner1'>
+      <input name='userId'></input>
+    </view>
+  </view>
+
+  <view class='list-item box'>
+    <text>所居住省市</text>
+    <picker mode="region" class='box' bindchange='changeAdd'>
+      <view class='picker'>
+        <text class='text1' data-address='{{address}}'>{{address}}</text>
+        <image src='../../Image/down-gray.png' mode='widthFix'></image>
+      </view>
+    </picker>
+  </view>
+
+  <view class='list-item box'>
+    <text>详细住址</text>
+    <view class='inputInner1'>
+      <input placeholder='请补全地址详细至门牌号' name="addressDetail"></input>
+    </view>
+  </view>
+  <view class='list-item box'>
+    <text>手机号码</text>
+    <view class='inputInner'>
+      <input placeholder='输入手机号' bindinput='phoneNum' name="phone"></input>
+    </view>
+    <text class='sendMsg' bindtap='sendMessage'>{{time}}</text>
+  </view>
+
+  <view class='list-item box'>
+    <text>验证码</text>
+    <view class='inputInner1'>
+      <input placeholder='请输入验证码' bindinput='userCode'></input>
+    </view>
+  </view>
+  <view class='btn-box'>
+    <button form-type='submit'>提交</button>
+  </view>
+</form>

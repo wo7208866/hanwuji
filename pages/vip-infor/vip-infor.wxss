@@ -1,0 +1,64 @@
+view{
+  box-sizing: border-box;
+}
+.infor-list text{
+  display: inline-block;
+
+}
+.text1{
+  width:75%;
+  /* text-indent: 2em; */
+  text-align: left;
+  color: black;
+  height: 100%;
+  vertical-align: middle;
+}
+.user-image2{
+  height: 100%;
+}
+.text2{
+  width: 25%;
+  text-align: left;
+  display: inline-block;
+  height: 100%;
+  color: #ad907e;
+  vertical-align: bottom;
+  box-sizing: border-box;
+}
+input{
+  height: 100%;
+}
+.infor-list{
+  background: #fff;
+  border-top: solid 1px #e0e0e0;
+  padding: 0 50rpx;
+}
+.infor-list view{
+  height: 100rpx;
+  line-height: 100rpx;
+
+}
+.infor-list .user-image2{
+  border-top: solid 1rpx #e0e0e0;
+
+}
+.infor-list image{
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  vertical-align: middle;
+  position: relative;
+  right: 10px;
+  }
+.user-image{
+  height: 70px!important;
+  line-height: 70px;
+  vertical-align: middle;
+}
+.user-image image{
+  border-radius: 50%;
+}
+.user-image text{
+  height: 70px;
+  line-height: 70px;
+}

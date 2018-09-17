@@ -1,0 +1,15 @@
+<!--pages/cost-detail/cost.wxml-->
+<view class='money-rest'>
+  <view class='money-rest-container'>
+    <view class='rest-sign-text'>可用余额（元）</view>
+    <view class='money-rest-num'>￥{{Info.money}}</view>
+  </view>
+</view>
+<view class='other-title'>额外赠送余额</view>
+<view class='other-money'>
+   <view class='other-money-name'>
+       <view>分享返现</view>
+       <view>2018.9.9  23:11:11</view>
+   </view>
+   <view class='other-money-num'>{{Info.extra}}元</view>
+</view>

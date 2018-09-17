@@ -1,0 +1,15 @@
+<!--pages/login/login.wxml-->
+<view class='login'>
+  <view class='login-box'>
+    <view>用户登录</view>
+    <input placeholder='手机号' placeholder-class='input-text' bindinput="UserPhone"></input>
+    <view>
+      <button class='get-num' bindtap="SendMessage">{{time}}</button>
+      <input placeholder='验证码' placeholder-class='input-text' bindinput="Message"></input>
+    </view>
+    <button class='login-btn' bindtap="Login">登录</button>
+    <view>
+      <navigator url=''>账号登录</navigator>
+    </view>
+  </view>
+</view>

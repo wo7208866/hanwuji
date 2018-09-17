@@ -1,0 +1,133 @@
+/* pages/adress/adress.wxss */
+page{
+  background: #fff;
+}
+.content{
+  text-align: center;
+}
+.no-img{
+  height: 80px;
+  width: 80px;
+  display: inline-block;
+  margin-top: 120px;
+  background: #fff;
+}
+.adr-tip{
+  color: #bb9a6b;
+  font-size: 12px;
+  width: 100%;
+  text-align:center;
+}
+.add-adress{
+  text-align: center;
+  width: 100%;
+  font-size: 16px;
+  color: white;
+  background:linear-gradient(to right,#DDCAA0,#BB9A6B)!important;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  line-height: 50px;
+
+}
+.add-adress .add-icon{
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  border-radius: 50% 50%;
+  border: solid 1px #fff;
+  font-size: 26rpx;
+  line-height: 26rpx;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.add-new-address{
+  width: 100%;
+  font-size: 32rpx;
+  color: #A0806A;
+  background: #fff;
+  height: 50px;
+  line-height: 50px;
+  margin-left: 30px;
+  position: relative;
+
+}
+.top-b{
+  border-top: solid 1px #d6d6d6;
+}
+.add-new-address .add-icon{
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  border-radius: 50% 50%;
+  border: solid 1px #a0806b;
+  font-size: 26rpx;
+  line-height: 26rpx;
+  margin-right: 20px;
+  vertical-align: middle;
+  text-align: center;
+
+}
+.go-for{
+  position: absolute;
+  right: 70px;
+}
+.address-list{
+  padding: 15px 30px;
+
+  line-height: 30px;
+}
+.list-box{
+  border-top: 7px solid #ebebeb;
+}
+.address-name{
+  color: black;
+  font-size: 28rpx;
+}
+.address-name text{
+  margin-left: 26rpx;
+  font-size: 26rpx;
+}
+.address-detail{
+  color: #a8a8a8;
+  font-size: 14px;
+}
+.edit-box{
+position: relative;
+font-size: 12px;
+border-top: solid 1px #d6d6d6;
+padding: 15px 30px;
+}
+.edit-box text{
+  color: #9f8169;
+
+}
+.edit-box .edit-btn{
+  position: absolute;
+  right: 150rpx;
+  font-size: 26rpx;
+}
+.edit-box .del-btn{
+  position: absolute;
+  right: 30px;
+  font-size: 26rpx;
+}
+.select-box{
+  vertical-align: middle;
+  margin-right: 20px;
+}
+.select-box radio{
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: -3px;
+}
+.select-box radio{
+  transform:scale(.8);
+}
+.navigator-hover{
+  background: #fff;
+}
+.default{
+  font-size: 26rpx;
+}

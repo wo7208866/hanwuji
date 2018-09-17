@@ -1,0 +1,48 @@
+<view class='section'>
+  <view class='vip-img'>
+    <image src='https://www.hgxrshn.com/static/Image/month-card.png'></image>
+  </view>
+  <view class='vip-card'>
+    <view>商品：会员月卡</view>
+    <view>有效期：30天</view>
+    <view>价格：499元</view>
+  </view>
+</view>
+<view class='buy-list'>
+  <text>押金：{{Deposit}}元</text>
+  <button class='bg-golden'>{{DepositFlag}}</button>
+</view>
+<view class='buy-list'>
+  <text>优惠：{{Coupon}}元</text>
+  <button class='bg-golden' hidden="{{Activate}}">新人立减活动</button>
+</view>
+<view class='all-fea'>
+  <text>费用总计：{{Money}}</text>
+</view>
+
+<view class='agreement'>
+  <view class='agreement-text'>
+    <checkbox bindtap="Agree"></checkbox>
+    <text>我已阅读</text>
+    <navigator url='../agreement/agreement'>
+      <text class='blue-font'>《衣当先租赁协议》</text>
+    </navigator>
+  </view>
+
+  <view class='confirm-order' bindtap='Pay'>确认支付</view>
+</view>
+
+<view class="modal-mask" catchtouchmove="preventTouchMove" wx:if="{{tip}}"></view>
+<view class="modal-dialog" wx:if="{{tip}}">
+  <view class="modal-content">
+    <text>小提示</text>
+    <text>请仔细阅读用户协议，同意后才可购买～</text>
+  </view>
+  <view class="modal-footer">
+    <view class="tip-confirm" bindtap="TipCancel" data-status="confirm">朕知道了</view>
+  </view>
+</view>
+
+<!-- End 清空提醒-->
+
+<i-toast id="toast" />

@@ -1,0 +1,121 @@
+<!--pages/cart/cart.wxml-->
+<view class="J-shopping-cart-empty" hidden='{{iscart}}'>
+  <view class="shooping-cart-empty-title">
+    <image src='https://www.hgxrshn.com/static/Image/close-null.svg'></image>
+    <text>恭喜您!衣柜已经全部清空</text>
+  </view>
+  <view class="shopping-cart-empty">
+    <text class='empty-text'>您的专属衣柜里什么都没有～</text>
+    <text class='empty-text'>快去逛逛吧</text>
+    <button type="button" bindtap="GoShopping" class="button button-primary">
+      去逛逛
+    </button>
+  </view>
+</view>
+<!--编辑-->
+<view class="Edit" hidden='{{!iscart}}'>
+  <view class="Edit-line">
+    <text bindtap='ChangeButton'>{{EditText}}</text>
+  </view>
+</view>
+<!--编辑结束-->
+<view class="scroll" hidden='{{!iscart}}'>
+  <scroll-view class="scroll" scroll-y="true">
+    <!--有效商品-->
+    <view wx:for="{{carts}}" wx:key="index">
+      <view class="cart_item" style="position: relative;">
+
+        <view class="cart_container">
+          <view class="cart_left">
+            <view wx:if="{{!item.isSelect}}">
+              <icon class="item-select" bindtap="switchSelect" data-index="{{index}}" data-id="{{item.id}}" type="circle" size="20"></icon>
+            </view>
+            <view wx:elif="{{item.isSelect}}">
+              <icon class="item-select" bindtap="switchSelect" data-index="{{index}}" data-id="{{item.id}}" type="success" color="#101010" size="20"></icon>
+            </view>
+          </view>
+
+          <view class="cart_right" bindtap='Detail'>
+            <image class="item-image" src="{{item.img}}"></image>
+            <view class="column">
+              <text class="title">{{item.Name}}</text>
+              <text class="standard">尺码:{{item.Model}}</text>
+              <text class='standard'>配饰：领带</text>
+              <text class="price">市场参考价 RMB {{item.Price}}</text>
+            </view>
+          </view>
+        </view>
+
+      </view>
+      <!--end有效商品-->
+      <view class="separate"></view>
+    </view>
+
+
+    <!--失效商品-->
+    <view wx:if="{{pastProduct}}">
+      <view class="none-title">
+        <text>失效商品</text>
+      </view>
+      <view class="separate"></view>
+      <view wx:for="{{carts_none}}" wx:key="index">
+        <view class="cart_item" style="position: relative;">
+          <view class="cart_container">
+            <view wx:if="{{!item.CanSelect}}">
+              <icon class="item-select" bindtap="NoneswitchSelect" data-index="{{index}}" data-id="{{item.id}}" type="circle" size="20"></icon>
+            </view>
+            <view wx:elif="{{item.CanSelect}}">
+              <icon class="item-select" bindtap="NoneswitchSelect" data-index="{{index}}" data-id="{{item.id}}" type="success" color="#101010" size="20"></icon>
+            </view>
+
+            <image class="item-image" src="{{item.img}}"></image>
+            <view class="column">
+              <text class="title">{{item.Name}}</text>
+              <text class="standard">{{item.Model}}</text>
+              <text class="price">市场参考价 RMB {{item.Price}}</text>
+            </view>
+
+          </view>
+
+        </view>
+      </view>
+      <!--end失效商品-->
+      <view class="separate"></view>
+    </view>
+  </scroll-view>
+</view>
+<view class="bottom_total" hidden='{{!iscart}}'>
+  <view class="row">
+    <text class="small_text" bindtap="handleOpen">全部清除</text>
+    <text class="button-red" bindtap="toBuy" formType="submit">{{ButtonText}}</text>
+  </view>
+</view>
+<!-- 底部菜单栏 -->
+
+
+<!--清空提醒-->
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{visible}}"></view>
+<view class="modal-dialog" wx:if="{{visible}}">
+  <view class="modal-content">
+    <text>请确认</text>
+    <text>是否清空您衣柜中的全部商品</text>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">清空</view>
+  </view>
+</view>
+
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{tip}}"></view>
+<view class="modal-dialog" wx:if="{{tip}}">
+  <view class="modal-content">
+    <text>小提示</text>
+    <text>单次只能打包一套西装哦～</text>
+  </view>
+  <view class="modal-footer">
+    <view class="tip-confirm" bindtap="TipCancel" data-status="confirm">朕知道了</view>
+  </view>
+</view>
+
+<!-- End 清空提醒-->

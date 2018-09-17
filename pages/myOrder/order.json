@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "我的订单",
+        "usingComponents": {
+          "i-badge": "../../dist/badge/index",
+          "i-toast": "../../dist/toast/index"
+        }
+}

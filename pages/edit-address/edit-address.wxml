@@ -1,0 +1,22 @@
+<!--pages/edit-address/edit-address.wxml-->
+<view class='add-view'>
+  联系人：<input type='text' bindinput='PersonInput' value='{{info.name}}'></input>
+</view>
+<view  class='add-view'>
+  联系电话：<input type='text' bindinput="PhoneInput" value="{{info.phone}}"></input>
+</view>
+<view class='add-view'>
+  所在地区：<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+               <view class="picker">
+                   <input class='city-select' type='text' value='{{array[index]}}'></input>
+                </view>
+             </picker>
+             <text class='city-for'>></text>
+</view>
+<view  class='add-view'>
+  详细地址：<input type='text' bindinput="AddressInput" value="{{info.address}}"></input>
+</view>
+<view class='defult-adress'>
+    <checkbox value='yes' color='#a0806b' bindtap='DefaultFlag' checked='{{info.default}}'/><text>设为默认地址</text>
+</view>
+<view class='add-address-save' bindtap="Save">保存并使用</view>

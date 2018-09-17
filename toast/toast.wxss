@@ -1,0 +1,92 @@
+.font-center{
+  text-align: left;
+  color: black;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.title{
+  font-size: 16px;
+  margin-top: 20px;
+}
+.toast-content{
+  width: 310px;
+  display: inline-block;
+  padding: 10px 0;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 1px 2px 2px #c7c7c7;
+  position: relative;
+}
+.toast{
+  width: 100%;
+ font-size: 12px;
+ text-align: center;
+ position: fixed;
+ top: 160px;
+ z-index: 9999;
+}
+.getphone-num{
+  display: inline-block;
+  border-radius: 15px 15px;
+  padding: 3px 10px;
+  width: 60px;
+  text-align: center;
+  font-size: 12px;
+  color: #bb9a6b;
+  border: solid 1px #bb9a6b;
+  margin-left: 25px;
+  vertical-align: middle;
+}
+.inp-text{
+  color:#dfdfdf;
+  font-size: 14px;
+}
+.toast-text{
+  padding: 0 20px;
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  position: relative;
+}
+.toast-icon{
+  position: absolute;
+  top: 2px;
+  left: 22px;
+  height: 20px;
+  width: 27px;
+  border-right: 1px solid #bb9a6b; 
+}
+.toast-icon image{
+  height: 20px;
+  width: 15px;
+  background: #fff;
+}
+.phone-message{
+  width: 118px!important;
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: middle;
+  border-bottom: solid 1px #dfdfdf;
+  padding-left: 45px;
+}
+  
+.toast button{
+  width: 150px;
+  font-size: 14px;
+  background:linear-gradient(to right,#DDCAA0,#BB9A6B);
+  color: white;
+  height: 28px;
+  line-height: 28px;
+  margin-top: 5px;
+  border-radius: 20px 20px;
+  margin-bottom: 10px;
+}
+
+.close-btn{
+  width: 16px;
+  height:16px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: #fff;
+}

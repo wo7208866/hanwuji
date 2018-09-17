@@ -1,0 +1,93 @@
+<view class="Swiper">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper-box" id="top">
+    <block wx:for-items="{{banner_list}}" wx:key="index">
+      <swiper-item>
+        <image class="slide-image" src="{{item}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<!--轮播图结束-->
+
+<view class="Info">
+  <image class="Info-image" src="https://www.hgxrshn.com/static/Image/Process.png" />
+</view>
+<view class='detail_pic'>
+  <navigator url='../activity/activity'>
+    <image class='detail-image' src='https://www.hgxrshn.com/static/Image/active1.png' mode='widthFix'></image>
+  </navigator>
+</view>
+<!--场景-->
+<view class="Scene">
+  <view class='gooditem'>
+    <view class='imgview' wx:for="{{newgoods}}" wx:key="index" wx:for-item="good" data-id="{{good.id}}" bindtap='SceneJump'>
+      <image class='productimg' src='{{good.hg_pic}}' />
+    </view>
+  </view>
+</view>
+<!--场景结束-->
+
+<!--选项卡-->
+<view class="tabTit box tc bg_f">
+  <view class='tab_bg'>
+    <view class="flex1{{!tab[index]?' active':''}}" wx:for="{{tabTxt}}" wx:key="" data-index="{{index}}" bindtap="filterTab">
+      <text class="tabs_text">{{item}}</text>
+      <text class="tab_border{{!tab[index]?' active-img':''}}"></text>
+      <text class='item_pic'></text>
+    </view>
+    <view class="flex1{{!tab[2]?' active':''}}" wx:key="" data-index="{{index}}" bindtap="toggleLeft">
+      <text>筛选</text>
+      <image class='select-icon' src='../../Image/菜单.svg'></image>
+    </view>
+  </view>
+</view>
+
+<!--筛选项-->
+<view class="tabLayer tc" hidden="{{tab[0]}}">
+  <text class="{{house_type==0?'active':''}}" data-id="0" data-index="0" data-txt="版型" bindtap="filter">不限</text>
+  <text class="{{house_type==item.id?'active':''}}" wx:for="{{filterList.style_list}}" wx:key="" data-id="{{item.id}}" data-index="0" data-txt="{{item.name}}" bindtap="filter">{{item.name}}</text>
+</view>
+<view class="tabLayer tc" hidden="{{tab[1]}}">
+  <text class="{{house_style==0?'active':''}}" data-id="0" data-index="1" data-txt="颜色" bindtap="filter">不限</text>
+  <text class="{{house_style==item.id?'active':''}}" wx:for="{{filterList.color_list}}" wx:key="" data-id="{{item.id}}" data-index="1" data-txt="{{item.name}}" bindtap="filter">{{item.name}}</text>
+</view>
+
+<!--商品列表 start-->
+<view class="welfare-container">
+
+  <scroll-view scroll-y="true">
+    <view class="welfares">
+      <block wx:for-items="{{goodsWelfareItems}}" wx:key="name">
+
+        <view class="welfares-good" catchtap="ProductDetail" data-type="{{item.name}}" data-id="{{item.id}}">
+          <view>
+            <image src="{{item.url}}" class="welfares-image" mode="widthFix" />
+          </view>
+
+          <view class="brand-name web-font">
+            <text class='brand-name-text'>{{item.name}}</text>
+            <view class='list-sign'>
+              <text>新品</text>
+            </view>
+          </view>
+          <view class="product-name web-font">
+            {{item.describe}}
+          </view>
+          <view class="product-price-wrap">
+            <p class="product-price-new">￥{{item.price}}</p>
+          </view>
+
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+
+</view>
+<!--商品列表 end-->
+
+<view class="weui-loadmore" hidden="{{isHideLoadMore}}">
+  <view class="weui-loading"></view>
+  <view class="weui-loadmore__tips">努力加载中</view>
+</view>
+
+<!-- 筛选条件弹出层 -->

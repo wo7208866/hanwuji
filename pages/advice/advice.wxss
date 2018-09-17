@@ -1,0 +1,28 @@
+page{
+  background: #ebebeb;
+}
+.advice-text{
+  padding: 20px;
+  font-size: 14px;
+  
+}
+ textarea{
+  width: 90%;
+  height: 200px;
+  background: #fff!important;
+  padding: 5%;
+}
+.advice-save{
+  text-align: center;
+}
+.advice-save button{
+  display: inline-block;
+  width: 300rpx;
+  margin-top: 50px;
+  background:linear-gradient(to right,#DDCAA0,#BB9A6B);
+  color: #fff;
+}
+.textarea-text{
+  font-size: 14px;
+  color: #c7c7c7;
+}

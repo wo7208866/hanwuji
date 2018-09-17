@@ -1,0 +1,58 @@
+/* pages/cost-detail/cost.wxss */
+page{
+  background: white;
+}
+.money-rest{
+  height: 150px;
+  width: 100%;
+  /* background: -moz-linear-gradient(top,#a0806b,#876043);
+  background: -linear-gradient(top,#a0806b,#876043);
+  background: -webkit-linear-gradient(top,#a0806b,#876043);
+  background: -o-linear-gradient(top,#a0806b,#876043); */
+  background:linear-gradient(to right,#DDCAA0,#BB9A6B);
+  text-align: center;
+  color: #fff;
+  line-height: 170px;
+}
+.money-rest-container{
+  display: inline-block;
+}
+.rest-sign-text{
+  font-size: 12px;
+  line-height: 20px;
+}
+.money-rest-num{
+  line-height: 40px;
+  font-size: 25px;
+  font-weight: bolder;
+}
+.other-title{
+  padding-left: 30px;
+  line-height: 35px;
+  font-size: 13px;
+  color: black;
+  border-bottom: solid 1px #ebebeb;
+  margin-top: 5px;
+  background: #fff;
+}
+.other-money{
+  background: #fff;
+  padding-left: 30px;
+  font-size: 13px;
+  color: black;
+  position: relative;
+  padding-top: 8px;
+  padding-bottom: 4px;
+}
+.other-money-num{
+  position: absolute;
+  right: 20px;
+  top: 0;
+  line-height: 52px;
+  font-size: 16px;
+  color: #876043;
+  font-weight: bolder;
+}
+.other-money-name{
+line-height: 20px;
+}

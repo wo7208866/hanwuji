@@ -1,0 +1,25 @@
+<!--pages/activity/activity.wxml-->
+<view wx:if="{{contentShow}}">
+    <view class='banner-img'>
+        <image src='https://www.hgxrshn.com/static/Image/active.png'> </image>
+    </view>
+    <view class='active-inp active-inp1'>
+      <text>姓名</text><input type='text' placeholder='请输入姓名' placeholder-class='active-text'></input>
+    </view>
+    <view  class='active-inp'> 
+        <text>手机号</text><input type='text' placeholder='请输入电话'  placeholder-class='active-text'></input>
+    </view>
+    <view class='active-card'>
+        <text class='act-text1'>学生证</text><text class='act-text2'>上传证照需清晰可见</text>
+    </view>
+    <view class='student-file'>
+      <view class='pic-upload' bindtap='getFile'><image class="{{geiFile?'filename':''}}" src='{{img}}'></image></view>
+    </view>
+    <view class='act-tip'>衣当先承诺所有用户信息均会私密保存，绝不用于商业化，还请放心</view>
+    <view class='act-save' bindtap='saveSubmit'>提交审核</view>
+</view>
+<view class='success-tip' wx:if="{{tipShow}}">
+   <view>申请已提交我们会在3个工作日内完成</view>
+  <view>验证成功后优惠券会自动入账，在购买月卡时抵扣</view>
+   <view>同时我们也会通过预留手机号通知您</view>
+</view>

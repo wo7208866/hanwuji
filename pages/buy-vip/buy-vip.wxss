@@ -1,0 +1,146 @@
+.section{
+  padding: 20px 0;
+  background: #fff;
+  margin-bottom: 8px;
+}
+.vip-img{
+  display: inline-block;
+  width: 45%;
+  vertical-align: middle;
+}
+.vip-img image{
+  width: 100%;
+  height: 100px;
+  margin-left: 10%;
+}
+.vip-card{
+  width: 35%;
+  display: inline-block;
+  margin-left: 10%; 
+  position: relative;
+  top: 20px;
+  color: #9c9c9c;
+}
+.buy-list{
+  border-bottom: solid 1px #d6d6d6;
+  position: relative;
+  height: 40px;
+  line-height: 45px;
+  padding-left: 100rpx;
+  padding-right: 100rpx;
+  background: #fff;
+  color: #9c9c9c;
+}
+.bg-golden{
+  background:linear-gradient(to right,#DDCAA0,#BB9A6B)!important;
+}
+.buy-list button{
+  display: inline-block;
+  position: absolute;
+  height: 50rpx;
+  line-height:50rpx;
+  right: 80rpx;
+  top: 9px;
+  font-size: 12px;
+  color: white;
+}
+.all-fea{
+  background: #fff;
+  height: 45px;
+  color: #bb9a6b;
+  line-height: 45px;
+  padding-left: 100rpx;
+}
+.agreement checkbox{
+ display: inline-block;
+ transform: scale(.6);
+}
+.agreement{
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.agreement-text{
+  padding-left: 25px;
+  height: 45px;
+  line-height: 45px;
+  color: black;
+  font-size: 12px;
+}
+.agreement navigator{
+  display: inline-block;
+}
+.blue-font{
+  color: #bb9a6b;
+}
+.confirm-order{
+  height: 45px;
+  color: white;
+  background:linear-gradient(to right,#DDCAA0,#BB9A6B);
+  text-align: center;
+  line-height: 45px;
+}
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-dialog {
+  width: 540rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: -180rpx 105rpx;
+  border-radius: 10rpx;
+}
+
+.modal-content {
+  padding: 50rpx 32rpx;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  border-top: 1px solid #dedede;
+  font-size: 34rpx;
+  line-height: 86rpx;
+}
+
+.btn-cancel {
+  width: 50%;
+  background: #222222;
+  color: white;
+  font-size:11pt;
+  text-align: center;
+}
+
+.btn-confirm {
+  width: 50%;
+  background: #CA0000;
+  color: white;
+  font-size:11pt;
+  text-align: center;
+}
+.tip-confirm{
+  width: 100%;
+  background:linear-gradient(to right,#DDCAA0,#BB9A6B);
+  color: white;
+  font-size:11pt;
+  text-align: center;
+}

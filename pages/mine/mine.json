@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "toast": "../../toast/toast",
+    "phone-alert": "../phone-change/phone",
+    "i-avatar": "../../dist/avatar/index",
+    "i-toast": "../../dist/toast/index"
+  },
+  "navigationBarTitleText": "个人中心"
+}

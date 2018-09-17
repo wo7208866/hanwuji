@@ -1,0 +1,30 @@
+<!--pages/add-adress/add-address.wxml-->
+<view class='add-view'>
+  联系人：
+  <input type='text' bindinput='PersonInput'></input>
+</view>
+<view class='add-view'>
+  联系电话：
+  <input type='text' bindinput="PhoneInput"></input>
+</view>
+<view class='add-view'>
+  所在地区：
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      <text class='city-select'>{{array[index]}}</text>
+    </view>
+  </picker>
+  <text class='city-for'>></text>
+</view>
+<view class='add-view'>
+  详细地址：
+  <input type='text' bindinput="AddressInput"></input>
+</view>
+
+<view class='add-view'>
+  <view>
+    <text class='gloden'>设为默认地址</text>
+    <switch class='mySwitch' value='yes' color='#bb9a6b' bindchange='DefaultFlag' checked='{{info.default}}'></switch>
+  </view>
+</view>
+<view class='add-address-save' bindtap="Save">保存并使用</view>

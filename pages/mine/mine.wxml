@@ -1,0 +1,163 @@
+<!--pages/mine/mine.wxml-->
+<!--会员卡-->
+<view class="title" wx:if="{{isVip}}">
+  <view class="card-vip">
+    <image class='vip-bg1' src='https://www.hgxrshn.com/static/Image/vip.png'></image>
+    <view class="user">
+      <image class='user_pci' src='{{UserImage}}'></image>
+      <view style="margin-top:10px;" class='web-font'>{{UserName}}</view>
+    </view>
+    <view class='logo-img'>
+      <image src='../../Image/logo1.png'></image>
+    </view>
+    <view class="vip">
+      <view class='web-font'>会员卡到期时间</view>
+      <view class='web-font'>{{Time}}</view>
+    </view>
+
+  </view>
+
+</view>
+<view class='title-usuall' wx:if="{{isUsuall}}">
+  <view class='card'>
+
+    <view class=" vip-bg2">
+      <navigator url='../apply-vip/apply-vip'>
+        <view class="usuall-img">
+          <i-avatar src="{{UserImage}}" size="large">
+          </i-avatar>
+          <view style="margin-top:10px;" class='web-font'>{{UserName}}</view>
+        </view>
+        <view class="usuall-text">
+          您还不是会员，开通可享权益
+        </view>
+      </navigator>
+    </view>
+
+  </view>
+</view>
+<!--会员卡End-->
+
+<!--我的订单-->
+<view class="MyOrder">
+  <view class='MyOrder-title web-font'>我的订单</view>
+  <view class='MyOrder-container web-font'>
+    <view class='MyOrder-item' data-index="0" bindtap='myOrder'>
+      <image src='../../Image/icon-2-08.svg'></image>
+      <view>待收货</view>
+    </view>
+    <view class='MyOrder-item' data-index="1" bindtap='myOrder'>
+      <image src='../../Image/icon-2-09.svg'></image>
+      <view>待归还</view>
+    </view>
+    <view class='MyOrder-item' data-index="2" bindtap='myOrder'>
+      <image src='../../Image/icon-2-10.svg'></image>
+      <view>已完成</view>
+    </view>
+    <view class='MyOrder-item' data-index="3" bindtap='myOrder'>
+      <image src='../../Image/icon-2-11.svg'></image>
+      <view>全部订单</view>
+    </view>
+  </view>
+
+</view>
+<!--我的订单End-->
+
+<!--我的权益-->
+
+<view class="MyRights">
+  <view class=' web-font discount-item-left'>
+    <navigator url='../discount/discount'>
+      <view class='item-text'>
+
+        <view class='view1'>我的优惠券</view>
+        <view class='view2'>{{Count}}张优惠券可用</view>
+
+      </view>
+      <view class='item-pic'>
+        <image src='../../Image/icon-2-06.svg'></image>
+      </view>
+    </navigator>
+  </view>
+  <view class='discount-item web-font'>
+    <navigator url='../moneyBox/money'>
+      <view class='item-text'>
+        <text class='view1'>钱包账户</text>
+      </view>
+      <view class='item-pic'>
+        <image src='../../Image/icon-2-05.svg'></image>
+      </view>
+    </navigator>
+  </view>
+</view>
+<view class="MyRights-pic">
+  <navigator url='../invite/invite'>
+    <image src='https://www.hgxrshn.com/static/Image/discount.jpg'></image>
+  </navigator>
+
+</view>
+<!--我的权益End-->
+
+<!--隐私与安全-->
+<view class="protect">
+  <view class='protect-title web-font'>隐私与安全</view>
+  <view class='protect-container web-font'>
+    <navigator class='protect-item-nav' url='../personalFile/personal'>
+      <view class='protect-item'>
+        <image src='../../Image/icon-2-01.svg' />
+        <view>个人档案</view>
+      </view>
+    </navigator>
+    <navigator class='protect-item-nav' url='../adress/adress'>
+      <view class='protect-item'>
+        <image src='../../Image/icon-2-02.svg' />
+        <view>地址管理</view>
+      </view>
+    </navigator>
+    <view class='protect-item-nav' bindtap='phoneChangeNum'>
+      <view class='protect-item'>
+        <image src='../../Image/icon-2-03.svg' />
+        <view>手机改绑</view>
+      </view>
+    </view>
+  </view>
+</view>
+<!--隐私与安全End-->
+<toast id='main' bind:phoneOk="phoneChange" modal-hidden='{{modalHiddenoff}}'></toast>
+<phone-alert phone-hidden="{{phoneHiddenoff}}"></phone-alert>
+<!-- 底部菜单栏 -->
+
+<!--剩余-->
+<view class="credit">
+  <navigator url='../honor/honor'>
+    <view class='credit-title web-font'>信用免押
+      <image class="title-icon" src='../../Image/jump-b.svg'></image>
+    </view>
+  </navigator>
+
+  <navigator url='../advice/advice'>
+    <view class='credit-title web-font'> 投诉与建议
+      <image class="title-icon" src='../../Image/jump-b.svg'></image>
+    </view>
+  </navigator>
+  <navigator url='../help/help'>
+    <view class='credit-title web-font'>客服与帮助
+      <image class="title-icon" src='../../Image/jump-b.svg'></image>
+    </view>
+  </navigator>
+</view>
+<!-- 底部菜单栏 -->
+
+<!--剩余End-->
+
+<!--空白-->
+<view class="Space">
+  <view class="Info">
+    <i-load-more tip="衣当先" loading="{{ false }}" />
+    <i-load-more tip="西安寒武纪信息科技有限公司提供技术支持" loading="{{ false }}" />
+  </view>
+
+</view>
+<!---->
+
+<i-toast id="toast" />

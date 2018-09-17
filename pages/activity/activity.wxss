@@ -1,0 +1,106 @@
+/* pages/activity/activity.wxss */
+page{
+  background: #fff;
+}
+.banner-img{
+  width: 100%;
+  height: 170px;
+}
+.banner-img image{
+  width: 100%;
+  height: 100%;
+}
+.active-inp{
+  padding: 10px 40px;
+  border-bottom: solid 1px #b8b8b8;
+  
+}
+.active-inp input{
+  display: inline-block;
+  width: 140px;
+  margin-left: 30px;
+ vertical-align: top;
+}
+.active-inp  text{
+  color: #bd9981;
+  vertical-align: middle;
+  display: inline-block;
+  width: 60px;
+}
+.active-card{
+  padding: 10px 40px;
+
+}
+.act-text1{
+  color:#bd9981;
+  display: inline-block;
+  width: 60px;
+
+}
+.active-inp1{
+  border-top: solid 5px #ebebeb;
+}
+.act-text2{
+  color: #9b9b9b;
+  margin-left: 30px;
+}
+.active-text{
+   color: #9b9b9b;
+}
+.student-file{
+  padding: 7px 50px;
+
+}
+.student-file view{
+  height: 170px;
+  width: 100%;
+  border: solid 1pt #9b9b9b;
+  margin-top: 10px;
+  border-radius: 10px 10px;
+  font-size: 30px;
+  text-align: center;
+}
+.student-file image{
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  margin-top: 50px;
+}
+.filename{
+  width: 100%!important;
+  height: 100%!important;
+  margin-top: 0!important;
+}
+.act-tip{
+  font-size: 10px;
+  border-top: solid 1px #9b9b9b;
+  color:#bd9981; 
+  text-align: center;
+  line-height: 40px;
+  margin-top: 20px;
+  height: 200px;
+}
+.act-save{
+  height: 45px;
+  width: 100%;
+  color: #fff;
+  background:linear-gradient(to right,#DDCAA0,#BB9A6B);
+  font-size: 16px;
+  text-align: center;
+  line-height: 45px;
+  position: fixed;
+  bottom: 0;
+}
+.success-tip view{
+  text-align: center;
+  width: 100%;
+  line-height: 30px;
+  color: white;
+}
+.success-tip{
+  position: absolute;
+  top: 200px;
+  width: 100%;
+  background: #c5c5c5;
+  padding: 40px 0;
+}

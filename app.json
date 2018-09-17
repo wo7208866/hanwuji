@@ -1,0 +1,80 @@
+{
+  "pages": [
+    "pages/honor/honor",
+    "pages/main/main",
+    "pages/select-main/select",
+    "pages/phone-change/phone",
+    "pages/increase-recoder/increase",
+    "pages/look-order/look-order",
+    "pages/orderfinish/orderfinish",
+    "pages/select-discount/select-discount",
+    "pages/orders/orders",
+    "pages/edit-password/password",
+    "pages/advice/advice",
+    "pages/agreement/agreement",
+    "pages/edit-address/edit-address",
+    "pages/invite/invite",
+    "pages/telephone/telephone",
+    "pages/description-word/description-word",
+    "pages/fea-recoder/recoder",
+    "pages/scene/scene",
+    "pages/personalFile/personal",
+    "pages/help/help",
+    "toast/toast",
+    "pages/mail/mail",
+    "pages/cart/cart",
+    "pages/adress/adress",
+    "pages/myOrder/order",
+    "pages/Auth/Auth",
+    "pages/activity/activity",
+    "pages/login/login",
+    "pages/mine/mine",
+    "pages/detail/detail",
+    "pages/discount/discount",
+    "pages/add-adress/add-address",
+    "pages/return/return",
+    "pages/index/index",
+    "pages/cost-detail/cost",
+    "pages/moneyBox/money",
+    "pages/apply-vip/apply-vip",
+    "pages/buy-vip/buy-vip",
+    "pages/vip-infor/vip-infor",
+    "pages/orderconfirm/orderconfirm",
+    "pages/logs/logs",
+    "pages/Test/test",
+    "pages/select-address/select-address"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "衣当先",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#858585",
+    "selectedColor": "#AE896A",
+    "backgroundColor": "#222222",
+    "borderStyle": "#000",
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "iconPath": "Image/home.png",
+        "selectedIconPath": "Image/home-select.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "iconPath": "Image/cart.png",
+        "selectedIconPath": "Image/cart-select.png",
+        "text": "衣柜"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "Image/mine.png",
+        "selectedIconPath": "Image/mine-select.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

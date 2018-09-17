@@ -1,0 +1,45 @@
+<!--pages/orderconfirm/orderconfirm.wxml-->
+<!--地址-->
+<view class="address">
+  <view class="left">
+    <view class="row web-font">
+      <text>{{ address.name }}</text>
+      <text>{{ address.phone }}</text>
+    </view>
+    <view class="row2 web-font">
+      <text>{{ address.info }}</text>
+    </view>
+  </view>
+  <view class="right" bindtap='Detail'>
+    <i-icon type="enter" size="28" color="#80848f"></i-icon>
+  </view>
+</view>
+<!--地址End-->
+
+
+<view class="space">
+</view>
+
+<!--订单信息-->
+<view class="content">
+  <view class="content-left">
+    <image src='../../Image/Clothes.jpg'></image>
+  </view>
+  <view class="content-right">
+    <text class="content-line1">{{product.name}}</text>
+    <text class="standard">已选“{{product.standard}}”</text>
+    <text>市场参考价 <text class='price'>RMB {{product.price}}</text></text>
+    <text>配送物流       顺丰速运</text>
+    <text>配送城市 {{address.info}}</text>
+  </view>
+</view>
+
+<!--订单信息End-->
+
+<!--底部按钮-->
+<button class="Confirm" bindtap='Confirm'>
+  立即租赁
+</button>
+<!--End-->
+
+<i-toast id="toast" />

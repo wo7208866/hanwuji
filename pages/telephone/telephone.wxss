@@ -1,0 +1,8 @@
+/* pages/telephone/telephone.wxss */
+page{
+  background: white;
+}
+view{
+  text-align: center;
+  padding: 20px 20px;
+}

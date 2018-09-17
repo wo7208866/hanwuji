@@ -1,0 +1,28 @@
+<view class='phone_toast' hidden="{{phoneHidden}}">
+
+  <view class="toast-content">
+    <view class='title'>绑定手机号</view>
+    <view class='font-center'>验证成功请绑定新的手机号 </view>
+    <view class='phone-text'>
+      <view>
+        <view class='phone-text-icon'>
+          <image src='../../Image/phoneCh.png'></image>
+        </view>
+        <input type='text' placeholder-class='inp-text' placeholder='请输入手机号' bindinput="NewPhone"></input>
+      </view>
+      <view>
+        <view class='phone-text-icon'>
+          <image src='../../Image/checkNum.png'></image>
+        </view>
+        <input class='phone-message' placeholder-class='inp-text' type='text' placeholder='请输入验证码' bindinput='Message'></input>
+        <text class='getphone-num' bindtap="Submit">{{time}}</text>
+      </view>
+
+    </view>
+
+    <button bindtap='phoneChangeSave'>绑定</button>
+    <image class='close-btn' src='../../Image/close.svg' bindtap='clickHidden'></image>
+  </view>
+
+
+</view>

@@ -1,0 +1,20 @@
+/* pages/description-word/description-word.wxss */
+page{
+  background: white;
+}
+.word-text{
+  padding: 30px 30px;
+  color: black;
+  font-size: 12px;
+  line-height: 28px;
+}
+.small-title{
+  font-size: 14px;
+  font-weight: bold;
+}
+.text-phone{
+  margin-left: 30px;
+}
+.red-font{
+  color: red;
+}

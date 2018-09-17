@@ -1,0 +1,18 @@
+<!--pages/Auth/Auth.wxml-->
+<view class='auth-box'>
+  <view style="width:100%;height:150px;margin-top:50px;">
+    <view class='user-img'>
+      <image class='logo' src='../../Image/wx_login.png'></image>
+      <view class='name'>衣当先</view>
+    </view>
+
+
+  </view>
+  <view class='tipContainer'>
+    <view class='tipTitle'>请确认以下授权信息</view>
+    <view class='tip-auth'>·获取你的信息（头像，信息等）</view>
+    <!-- 需要使用 button 来授权登录 -->
+    <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class='auth-btn'>授权登录</button>
+    <view wx:else>请升级微信版本</view>
+  </view>
+</view>
